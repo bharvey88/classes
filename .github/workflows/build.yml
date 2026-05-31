@@ -31,8 +31,8 @@ jobs:
             pandoc "$src" -o "dist/$out.docx"
             soffice --headless --convert-to pdf --outdir dist "dist/$out.docx"
           }
-          build outline.md "Speaker-Cue-Outline"
-          build handout.md "HA-Attendee-Handout"
+          build docs/outline.md "Speaker-Cue-Outline"
+          build docs/handout.md "HA-Attendee-Handout"
           ls -la dist
 
       - name: Upload build artifacts
