@@ -4,7 +4,7 @@ An introduction-to-**Home Assistant** class built for complete beginners and fir
 
 ## Read it online
 
-**→ [bharvey88.github.io/home-assistant-intro-class](https://bharvey88.github.io/home-assistant-intro-class/)** — a clean, searchable site with clickable links (no download needed).
+**→ [classes.smarthomesellout.com](https://classes.smarthomesellout.com/)** — a clean, searchable site with clickable links (no download needed).
 
 ## What's in here
 
