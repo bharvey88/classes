@@ -1,8 +1,8 @@
-# Smart Homes Done the Right Way — An Introduction to Home Assistant
+# Intro to Home Assistant
 
-**Speaker Cue Outline**
+*Smart Homes Done the Right Way · Speaker Cue Outline*
 
-*Format: Presentation + live demo · Audience: complete beginners · Venue: Dallas Makerspace · Duration: ~2–2.5 hrs with a 10-min break*
+*Format: Presentation + live demo · Audience: complete beginners · Venue: Dallas Makerspace · Duration: about 2 to 2.5 hrs with a 10-min break*
 
 ---
 

@@ -1,8 +1,10 @@
-# Smart Homes Done the Right Way
+# Intro to Home Assistant
 
-*A class by **Brandon Harvey** (aka SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com)*
+*Smart Homes Done the Right Way*
 
-**An Introduction to Home Assistant**, a beginner-friendly class first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Read it online here, or download the printable versions. Want to teach your own? It's built to be forked.
+A class by **Brandon Harvey** (aka SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com)
+
+A beginner-friendly class first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Read it online here, or download the printable versions. Want to teach your own? It's built to be forked.
 
 ## Read the class online
 

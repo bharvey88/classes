@@ -1,6 +1,8 @@
-# Smart Homes Done the Right Way
+# Intro to Home Assistant
 
-An introduction-to-**Home Assistant** class built for complete beginners and first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Everything is here so you can **follow along, or fork it and teach your own version** at your local makerspace, library, or hackerspace.
+*Smart Homes Done the Right Way*
+
+A **Home Assistant** class built for complete beginners and first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Everything is here so you can **follow along, or fork it and teach your own version** at your local makerspace, library, or hackerspace.
 
 ## Read it online
 
