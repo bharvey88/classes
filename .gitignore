@@ -1,0 +1,4 @@
+# Build output (produced by CI / local pandoc + libreoffice)
+dist/
+*.docx
+*.pdf

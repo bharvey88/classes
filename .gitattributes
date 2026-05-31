@@ -1,0 +1,2 @@
+# Normalize all text files to LF in the repo (keeps the CI shell scripts happy)
+* text=auto eol=lf
