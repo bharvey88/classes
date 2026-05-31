@@ -71,4 +71,4 @@ Almost every integration talks to your devices through small open-source librari
 
 ---
 
-*Presented by Brandon · Apollo Automation · <https://apolloautomation.com>*
+*Presented by Brandon Harvey (SmartHomeSellout) · <https://smarthomesellout.com>*
