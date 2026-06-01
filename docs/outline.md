@@ -161,7 +161,7 @@ Short questions on the spot, longer ones parked to the end.
 
 - **HA Docs** — the integration library is your best friend
 - **ESPHome.io** — component reference (and tease the ESPHome class)
-- **Community** — HA Discord, ESPHome Discord, r/homeassistant, r/esphome
+- **Community** — ESPHome Discord, r/homeassistant, r/esphome
 - **Quality YouTube** — digiblur and other rigorous folks
 - **Influencer warning** — sponsorships/affiliate links, cross-reference the community
 - **Content decay warning** — HA moves fast, check dates, go straight to official docs
