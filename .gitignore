@@ -5,3 +5,6 @@ dist/
 
 # MkDocs site build
 site/
+
+# Local venv
+.venv/

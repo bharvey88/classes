@@ -1,48 +1,58 @@
-site_name: Intro to Home Assistant
-site_description: A beginner-friendly Introduction to Home Assistant class, free and ready to fork.
+site_name: SmartHomeSellout Classes
+site_description: Free smart home and maker classes taught at Dallas Makerspace. Read online, download print versions, or fork and teach your own.
 site_url: https://classes.smarthomesellout.com/
 
-repo_url: https://github.com/bharvey88/home-assistant-intro-class
-repo_name: bharvey88/home-assistant-intro-class
+repo_url: https://github.com/bharvey88/classes
+repo_name: bharvey88/classes
 edit_uri: edit/main/docs/
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: teal
+    - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
   features:
     - navigation.instant
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - content.action.edit
     - search.suggest
     - search.highlight
     - toc.follow
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Home: index.md
-  - Class Outline: outline.md
-  - Attendee Handout: handout.md
+  - Intro to Home Assistant:
+      - intro-to-home-assistant/index.md
+      - Speaker outline: intro-to-home-assistant/outline.md
+      - Attendee handout: intro-to-home-assistant/handout.md
 
 markdown_extensions:
   - admonition
   - tables
   - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - pymdownx.emoji:
@@ -51,3 +61,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        outline.md: intro-to-home-assistant/outline.md
+        handout.md: intro-to-home-assistant/handout.md
