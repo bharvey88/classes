@@ -1,0 +1,182 @@
+/* =========================================================================
+   classes.smarthomesellout.com - brand overrides for MkDocs Material
+   Tokens mirror smarthomesellout.com src/styles/global.css.
+   One accent (amber). Flat 1px borders. No shadows, no gradients.
+   ========================================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap");
+
+/* ---- Dark scheme (default) ---- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d0f17;
+  --md-default-fg-color: #f0eee9;
+  --md-default-fg-color--light: #a8a49c;
+  --md-default-fg-color--lighter: #71737e;
+  --md-default-fg-color--lightest: #232839;
+
+  --md-primary-fg-color: #11141d;   /* header / nav chrome */
+  --md-primary-bg-color: #f0eee9;   /* text on header */
+  --md-accent-fg-color: #ffb454;
+  --md-typeset-a-color: #ffb454;
+
+  --md-code-bg-color: #141823;
+  --md-code-fg-color: #f0eee9;
+
+  --md-footer-bg-color: #11141d;
+  --md-footer-bg-color--dark: #0d0f17;
+  --md-footer-fg-color: #f0eee9;
+  --md-footer-fg-color--light: #a8a49c;
+
+  --shs-surface: #141823;
+  --shs-surface-hover: #1a1f2e;
+  --shs-border: #232839;
+  --shs-border-strong: #323a4f;
+  --shs-accent: #ffb454;
+  --shs-accent-ink: #1a1409;
+}
+
+/* ---- Light scheme (toggle) ---- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #faf9f6;
+  --md-default-fg-color: #1b1914;
+  --md-default-fg-color--light: #59554b;
+  --md-default-fg-color--lighter: #8b8779;
+  --md-default-fg-color--lightest: #e3dfd5;
+
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #1b1914;
+  /* Amber text fails contrast on white; links darken, fills stay amber. */
+  --md-accent-fg-color: #9b5d00;
+  --md-typeset-a-color: #9b5d00;
+
+  --md-code-bg-color: #f2efe9;
+  --md-code-fg-color: #1b1914;
+
+  --md-footer-bg-color: #ffffff;
+  --md-footer-bg-color--dark: #faf9f6;
+  --md-footer-fg-color: #1b1914;
+  --md-footer-fg-color--light: #59554b;
+
+  --shs-surface: #ffffff;
+  --shs-surface-hover: #f2efe9;
+  --shs-border: #e3dfd5;
+  --shs-border-strong: #c9c3b4;
+  --shs-accent: #ffb454;
+  --shs-accent-ink: #1a1409;
+}
+
+/* ---- Kill Material's elevation shadows everywhere ---- */
+:root {
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: none;
+}
+
+/* ---- Typography ---- */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  font-family: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h1 { font-weight: 700; }
+
+/* ---- Header: flat, bordered, no shadow ---- */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--shs-border);
+}
+.md-header__title {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* ---- Search field: flat surface ---- */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form,
+.md-search__form {
+  background: var(--shs-surface);
+  border: 1px solid var(--shs-border);
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+.md-search__output {
+  border: 1px solid var(--shs-border);
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: none;
+}
+
+/* ---- Grid cards: flat 1px-border surfaces ---- */
+.md-typeset .grid.cards > ol > li,
+.md-typeset .grid.cards > ul > li {
+  background: var(--shs-surface);
+  border: 1px solid var(--shs-border);
+  border-radius: 0.75rem;
+  box-shadow: none;
+  transition: border-color 0.15s ease;
+}
+.md-typeset .grid.cards > ol > li:hover,
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--shs-border-strong);
+  box-shadow: none;
+}
+.md-typeset .grid.cards > ul > li hr {
+  border-bottom: 1px solid var(--shs-border);
+}
+
+/* Coming-soon cards: muted, non-interactive */
+.md-typeset .coming-soon.grid.cards > ul > li {
+  opacity: 0.6;
+}
+.md-typeset .coming-soon.grid.cards > ul > li:hover {
+  border-color: var(--shs-border);
+}
+
+/* ---- Buttons ---- */
+.md-typeset .md-button {
+  border: 1px solid var(--shs-border-strong);
+  border-radius: 0.75rem;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .md-button:hover {
+  background: var(--shs-surface-hover);
+  border-color: var(--shs-border-strong);
+  color: var(--md-default-fg-color);
+}
+.md-typeset .md-button--primary {
+  background: var(--shs-accent);
+  border-color: var(--shs-accent);
+  color: var(--shs-accent-ink);
+}
+.md-typeset .md-button--primary:hover {
+  background: var(--shs-accent);
+  border-color: var(--shs-accent);
+  color: var(--shs-accent-ink);
+  filter: brightness(1.06);
+}
+
+/* ---- Tables: flat, bordered, rounded ---- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--shs-border);
+  border-radius: 0.75rem;
+  box-shadow: none;
+}
+.md-typeset table:not([class]) th {
+  background: var(--shs-surface);
+}
+
+/* ---- Admonitions (site-only pages): flat, single accent ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--shs-border);
+  border-left: 3px solid var(--shs-accent);
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+
+/* ---- Footer ---- */
+.md-footer-meta {
+  border-top: 1px solid var(--shs-border);
+}
