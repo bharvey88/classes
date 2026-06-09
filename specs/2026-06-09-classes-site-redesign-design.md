@@ -173,15 +173,19 @@ Unchanged in spirit: build MkDocs site, deploy to GitHub Pages. Gains
 
 ### build.yml (docx/PDF)
 
-Parameterized per class:
+No manual versioning. One rolling release per class with a fixed tag:
 
-- A class is identified by its folder slug (`intro-to-home-assistant`).
-- Tag scheme is per class: `intro-ha-v1.2.0` builds and releases only that
-  class's documents, attached to the release. A small mapping in the workflow
-  resolves tag prefix to folder slug and output basenames
-  (`Intro-to-HA-Speaker-Outline.docx/pdf`, `Intro-to-HA-Attendee-Handout.docx/pdf`).
-- Push builds (artifacts only) build all classes' documents.
-- Existing `v*` releases stay as history; new releases use the per-class scheme.
+- A class is identified by its folder slug (`intro-to-home-assistant`). A small
+  mapping in the workflow resolves slug to release tag (`intro-ha`) and output
+  basenames (`Intro-to-HA-Speaker-Outline.docx/pdf`,
+  `Intro-to-HA-Attendee-Handout.docx/pdf`).
+- On every push to `main` that touches a class's docs, CI rebuilds that class's
+  documents and replaces the assets on its rolling release. The release date is
+  the only version anyone needs.
+- Download URLs are therefore permanent and printable:
+  `releases/download/intro-ha/<file>.pdf`. The class page and README link these
+  directly.
+- The existing `v1.0.0` release stays as history but is no longer linked.
 
 Pandoc/LibreOffice conversion pipeline itself is unchanged.
 
@@ -202,9 +206,9 @@ Covers, tersely:
   tokens change, update extra.css to match.
 - How to add a class: folder under docs/, hub card, nav entry, tag mapping in
   build.yml.
-- Workflow: edit markdown, push to main, Pages deploys; tag `<class>-vX.Y.Z`
-  for document releases. Local preview: `pip install mkdocs-material
-  mkdocs-redirects && mkdocs serve`.
+- Workflow: edit markdown, push to main; Pages deploys the site and CI
+  refreshes the touched class's rolling release automatically. Local preview:
+  `pip install mkdocs-material mkdocs-redirects && mkdocs serve`.
 
 ### AGENTS.md (new)
 
@@ -233,8 +237,9 @@ One line: see CLAUDE.md.
 1. classes.smarthomesellout.com serves the hub with one live card and three
    coming-soon cards, dark by default, amber accent, Space Grotesk headings.
 2. Old `/outline/` and `/handout/` URLs redirect to the new paths.
-3. `git tag intro-ha-v1.1.0 && git push --tags` produces a release with the
-   four renamed documents attached.
+3. Pushing a change to `docs/intro-to-home-assistant/` refreshes the `intro-ha`
+   rolling release with the four renamed documents attached, and
+   `releases/download/intro-ha/...` URLs serve them.
 4. No em dash remains in any markdown file in `docs/`.
 5. The middleman paragraph appears in full exactly once.
 6. docx/PDF outputs contain no literal `!!!`, raw HTML, or card syntax.
