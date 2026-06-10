@@ -16,7 +16,7 @@ Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspa
 
     ---
 
-    Smart homes done the right way: every device in one local app, no cloud lock-in. From "what is this?" to live automations in about 2.5 hours.
+    Smart homes done the right way: every device in one local app, no cloud lock-in. From "what is this?" to live automations in about two hours.
 
     [Go to the class](intro-to-home-assistant/index.md){ .md-button .md-button--primary }
 

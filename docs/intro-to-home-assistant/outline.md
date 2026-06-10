@@ -2,7 +2,7 @@
 
 *Smart Homes Done the Right Way · Speaker Cue Outline*
 
-*Format: Presentation + live demo · Audience: complete beginners · Venue: Dallas Makerspace · Duration: about 2 to 2.5 hrs with a 10-min break*
+*Format: Presentation + live demo · Audience: complete beginners · Venue: Dallas Makerspace · Duration: ~95 min of content in a 2-hour slot, 5-min stretch break*
 
 ---
 
@@ -29,7 +29,7 @@
 - **Must be present to win.** Drawings happen throughout as each one comes up.
 - Winner picked live by the random-number roller you just saw.
 
-## Block 2: What is Home Assistant? (12 min)
+## Block 2: What is Home Assistant? (8 min)
 
 - Brief history: started 2013, Paulus Schoutsen
 - **The core idea: HA is the middleman.** One app in the middle, every protocol (Zigbee, Z-Wave, Wi-Fi, Bluetooth) connected to it, instead of ten vendor apps that don't talk to each other.
@@ -42,7 +42,7 @@
 - Philosophy: local-first, no vendor lock-in, your data stays yours
 - **aiohttp closer**: "how HA talks to all your devices at once without choking; volunteers keep it alive" → donate link in handout
 
-## Block 3: How to Run It (8 min)
+## Block 3: How to Run It (6 min)
 
 - **Why HAOS**: easiest, best supported, full app ecosystem
 - Hardware:
@@ -95,36 +95,36 @@
 - Each comes in Zigbee / Z-Wave / Wi-Fi (Shelly is the Wi-Fi go-to)
 - **Rule of thumb:** switches & relays keep the wall working for family/guests; bulbs are for color everywhere
 
-## Q&A Stop 1 (5 min)
+## Q&A Stop 1 (3 min)
 
 Short questions on the spot, longer ones parked to the end.
 
-## Block 6: Live HA Demo (22 min)
+## Block 6: Live HA Demo (10 min)
 
 - Onboarding walkthrough
 - **Dashboard deep-dive**: sections, cards, building a usable view (not just a tour)
 - **HACS (Home Assistant Community Store)**: custom cards, themes, community integrations beyond what's built in
-    - Live: download a theme, **Catppuccin Macchiato**
+    - Live: download a theme, **Catppuccin Macchiato** (cut if running long)
     - Light caveat: third-party, install sparingly
 - **Companion app (iOS/Android)**: install, sign in, presence/device tracking, push notifications
 - **Add an integration live**: keep it simple: AirNow (air quality)
 - **Create a simple automation**: turn a light on/off with a Zigbee button (may change later)
 - Show the App store
 
-## Break (10 min)
+## Break (5 min)
 
-## Block 7: Automations & Scripts: The Payoff (10 min)
+## Block 7: Automations & Scripts: The Payoff (8 min)
 
 - **Automations = "when X happens, do Y"**: they run themselves
 - **Your real examples:**
     - **Mailbox alert**: mailbox opens → camera snapshot → phone notification with the image + "You've got mail" → also pops on the desktop PC and the TVs (if online) → plays the old AOL "You've Got Mail" clip on the HomePods around the house
-    - **Leaving home** (device tracker): I leave → lock doors + arm alarm → snapshot of the room → lights brightness/color off then back on → sleep the PC
+    - **Leaving home** (cut if running long) (device tracker): I leave → lock doors + arm alarm → snapshot of the room → lights brightness/color off then back on → sleep the PC
 - **Scripts = a saved routine you trigger on demand** (vs automations that fire themselves)
     - Your wake-up routine and goodnight/sleep routine scripts
     - Can be fired by a button, voice, the dashboard, or called by an automation
 - **Takeaway:** automations react, scripts are reusable routines, and they combine
 
-## Block 8: ESPHome & Building Your Own (6 min)
+## Block 8: ESPHome & Building Your Own (4 min)
 
 - What it is: turns cheap ESP32 chips into HA devices using YAML
 - Part of the ecosystem, Nabu Casa stewards it
@@ -142,22 +142,22 @@ Short questions on the spot, longer ones parked to the end.
 - Why the ESPHome add-on in HAOS makes onboarding/flashing easy
 - **Future-class build:** ESP32 WROOM32 + DHT22 + 5-pixel WS2812B strip: YAML walkthrough, flash, watch it appear in HA, dashboard + light effects
 
-## Block 9: More Ways to Interact: Voice & Wall Displays (8 min)
+## Block 9: More Ways to Interact: Voice & Wall Displays (4 min)
 
 - **HA Voice Preview Edition**: local voice assistant hardware
     - Honest caveat: replacing/mimicking Alexa or Google takes real manual setup today, not plug-and-play yet
-    - **GIVEAWAY: Voice PE** (use the picker; if you like, have the Voice PE announce its own winner out loud)
+    - **GIVEAWAY: Voice PE** (use the picker; if you like, have the Voice PE announce its own winner out loud; cut the gag if running long)
 - **Wall tablets + Fully Kiosk**: cheap tablet as a wall-mounted dashboard
     - Fully Kiosk handles screen on/off (motion wake) + locked-down kiosk mode
 
-## Block 10: Claude Code + HA MCP (10 min): the finale
+## Block 10: Claude Code + HA MCP (6 min): the finale
 
 - What it is: an AI agent that talks directly to your HA through the MCP
 - Configure devices, build dashboards, write automations by *asking*
 - **Live moment if you're brave:** "make me a dashboard card for the living room" → watch it happen
 - Why it's a big deal for beginners: lowers the wall between "I have an idea" and "it's running"
 
-## Block 11: Where to Go Next (5 min)
+## Block 11: Where to Go Next (3 min)
 
 - **HA Docs**: the integration library is your best friend
 - **ESPHome.io**: component reference (and tease the ESPHome class)
@@ -166,6 +166,6 @@ Short questions on the spot, longer ones parked to the end.
 - **Influencer warning**: sponsorships/affiliate links, cross-reference the community
 - **Content decay warning**: HA moves fast, check dates, go straight to official docs
 
-## Q&A Stop 2 (10 min)
+## Q&A Stop 2 (8 min)
 
-*Running time: ~140 min content + 10 break ≈ 2.5 hrs (likely faster).*
+*Running time: ~94 min content + 5 break ≈ 100 min, scheduled in a 2-hour slot. Q&A, giveaways, and overruns live in the buffer.*
