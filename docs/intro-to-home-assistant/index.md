@@ -2,7 +2,7 @@
 
 *Smart Homes Done the Right Way*
 
-A class by **Brandon Harvey** (aka SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com), first taught at the [Dallas Makerspace](https://dallasmakerspace.org).
+A class by **Brandon Harvey** (SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com), first taught at the [Dallas Makerspace](https://dallasmakerspace.org).
 
 ![A shelf of smart home gear: Hue bulbs, Zooz Z-Wave sensors, UniFi, Homey Pro](../assets/photos/intro-ha-hero.webp){ .page-hero }
 
@@ -11,23 +11,17 @@ Home Assistant is the middleman that connects all your smart devices and protoco
 [Speaker outline](outline.md){ .md-button .md-button--primary }
 [Attendee handout](handout.md){ .md-button }
 
-## Download the print versions
-
-Built automatically from the same Markdown on every change:
+## Downloads
 
 - [Speaker outline (PDF)](https://github.com/bharvey88/classes/releases/download/intro-ha/Intro-to-HA-Speaker-Outline.pdf) · [docx](https://github.com/bharvey88/classes/releases/download/intro-ha/Intro-to-HA-Speaker-Outline.docx)
 - [Attendee handout (PDF)](https://github.com/bharvey88/classes/releases/download/intro-ha/Intro-to-HA-Attendee-Handout.pdf) · [docx](https://github.com/bharvey88/classes/releases/download/intro-ha/Intro-to-HA-Attendee-Handout.docx)
 
-## From my actual setup
+## My Z-Wave mesh
 
 ![Z-Wave mesh network map in Home Assistant](../assets/photos/zwave-mesh.webp){ .page-figure }
 
-*The Z-Wave mesh running my house: locks, sensors, and switches on one controller. In class we cover how a mesh like this gets built, one device at a time.*
+*Locks, sensors, and switches across the house, one controller. The class covers how a mesh like this gets built, one device at a time.*
 
-## Teach it yourself
+---
 
-1. [Fork the repo](https://github.com/bharvey88/classes/fork).
-2. Edit the Markdown in `docs/intro-to-home-assistant/` to swap in your own gear, stories, and demos.
-3. Push, and the site and documents rebuild automatically.
-
-Content is licensed [CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE): use it, remix it, teach with it.
+Want to run this class at your own makerspace? [Teach these classes](../teaching.md). Content is [CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE).

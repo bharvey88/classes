@@ -6,7 +6,7 @@ hide:
 
 # Classes
 
-Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspace.org), published here for anyone. Read them online, download the print versions, or fork the repo and teach your own.
+Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspace.org). Read them online or download the print versions.
 
 <div class="grid cards" markdown>
 
@@ -46,6 +46,6 @@ Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspa
 
 </div>
 
-Everything here is plain Markdown in a [public repo](https://github.com/bharvey88/classes), licensed [CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE). Fork it, swap in your own gear and stories, and teach it at your makerspace or library.
+Everything is [CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE). Want to run one of these at your own makerspace or library? [Teach these classes](teaching.md).
 
 *By Brandon Harvey (SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com)*

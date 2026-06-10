@@ -47,6 +47,7 @@ nav:
       - intro-to-home-assistant/index.md
       - Speaker outline: intro-to-home-assistant/outline.md
       - Attendee handout: intro-to-home-assistant/handout.md
+  - Teach these classes: teaching.md
 
 markdown_extensions:
   - admonition

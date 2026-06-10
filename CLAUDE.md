@@ -5,6 +5,7 @@ Catalog of classes Brandon Harvey teaches at Dallas Makerspace, published at cla
 ## Layout
 
 - `docs/index.md`: hub landing page, one card per class.
+- `docs/teaching.md`: the fork/build/license page for people who want to teach a class. Class pages are written for attendees; anything about forking, pipelines, or repo mechanics belongs on teaching.md or in the README, never on a class page.
 - `docs/<class-slug>/`: one folder per class (`index.md` class page, `outline.md` speaker outline, `handout.md` attendee handout).
 - `docs/stylesheets/extra.css`: the entire brand restyle. No other styling anywhere.
 - `specs/`, `plans/`: design docs, NOT published (everything under `docs/` is).
