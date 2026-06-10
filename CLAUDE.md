@@ -20,8 +20,10 @@ Catalog of classes Brandon Harvey teaches at Dallas Makerspace, published at cla
 
 Tokens in `extra.css` mirror smarthomesellout.com's `src/styles/global.css` (the 2026-06 de-slop redesign). If the main site's tokens change, update `extra.css` to match.
 
-- Dark default, light toggle. ONE accent: amber `#ffb454` (`#9b5d00` for text links in light mode).
-- Flat 1px borders, 0.75rem radius. Never add box shadows, gradients, glow, or extra accent colors.
+- Dark default, light toggle. ONE brand accent: amber `#ffb454` (`#9b5d00` for text links in light mode).
+- Each class additionally has an identity color, used ONLY for its card top border and icon: HA amber, ESPHome teal, WLED violet, soldering green (`--shs-c-*` in extra.css, both schemes). These mirror the main site's data colors. Everything else stays amber.
+- Class cards carry a photo (`.card-photo`) and the class page a hero image (`.page-hero`). Real photos preferred; flat SVG placeholders live in `docs/assets/placeholders/` until Brandon supplies them. Swap a placeholder by replacing the image link on the hub and class page (or overwriting the file if the format matches).
+- Flat 1px borders, 0.75rem radius. Never add box shadows, gradients, glow, or extra accent colors beyond the class identity colors above.
 - Headings: Space Grotesk. Body: Inter. Code: JetBrains Mono.
 - Voice: terse, concrete, plain headings. No em dashes anywhere, in any file, ever: use commas, colons, parentheses, or sentence breaks.
 - Keep bold for product names, giveaway cues, and real warnings. No bold-stuffing.
@@ -29,7 +31,7 @@ Tokens in `extra.css` mirror smarthomesellout.com's `src/styles/global.css` (the
 ## Adding a class
 
 1. Create `docs/<class-slug>/` with `index.md`, `outline.md`, `handout.md`.
-2. Promote its coming-soon card on `docs/index.md` to a live card linking the class page.
+2. Promote its coming-soon card on `docs/index.md` to a live card linking the class page (keep its icon and `--shs-c-*` identity color; add a `.card-photo` image).
 3. Add a nav section in `mkdocs.yml` (first child is the bare `index.md` path so `navigation.indexes` makes it the section landing).
 4. In `.github/workflows/build.yml`: add `build` lines for the new files and a "Refresh rolling release" step with a new tag (pattern: short class slug, e.g. `esphome`).
 

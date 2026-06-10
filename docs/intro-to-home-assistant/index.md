@@ -4,6 +4,8 @@
 
 A class by **Brandon Harvey** (aka SmartHomeSellout) · [smarthomesellout.com](https://smarthomesellout.com), first taught at the [Dallas Makerspace](https://dallasmakerspace.org).
 
+![Smart home gear for the class](../assets/placeholders/intro-ha.svg){ .page-hero }
+
 Home Assistant is the middleman that connects all your smart devices and protocols (Zigbee, Z-Wave, Wi-Fi, Bluetooth) into one local app. No ten vendor apps, no cloud lock-in: your data stays yours. Over about 2.5 hours the class goes from "what is this?" to running automations, choosing protocols and gear, and letting an AI agent build your dashboards.
 
 [Speaker outline](outline.md){ .md-button .md-button--primary }

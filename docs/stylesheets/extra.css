@@ -210,3 +210,75 @@
 .md-footer-meta {
   border-top: 1px solid var(--shs-border);
 }
+
+/* ---- Class identity colors (mirror the main site's data colors) ---- */
+[data-md-color-scheme="slate"] {
+  --shs-c-ha: #ffb454;
+  --shs-c-esphome: #39c5cf;
+  --shs-c-wled: #9d6bff;
+  --shs-c-solder: #2bd97c;
+}
+[data-md-color-scheme="default"] {
+  --shs-c-ha: #9b5d00;
+  --shs-c-esphome: #0c7d87;
+  --shs-c-wled: #6b3fd1;
+  --shs-c-solder: #11804b;
+}
+
+/* ---- Class icons on cards ---- */
+.md-typeset .class-icon {
+  font-size: 1.3em;
+  vertical-align: -0.25em;
+  margin-right: 0.2em;
+}
+.md-typeset .c-ha { color: var(--shs-c-ha); }
+.md-typeset .c-esphome { color: var(--shs-c-esphome); }
+.md-typeset .c-wled { color: var(--shs-c-wled); }
+.md-typeset .c-solder { color: var(--shs-c-solder); }
+
+/* ---- Per-class card top border. Needs :has(); older browsers keep the
+   plain 1px border, which is an acceptable fallback. ---- */
+.md-typeset .grid.cards > ul > li:has(.c-ha),
+.md-typeset .grid.cards > ul > li:has(.c-ha):hover {
+  border-top: 3px solid var(--shs-c-ha);
+}
+.md-typeset .grid.cards > ul > li:has(.c-esphome),
+.md-typeset .grid.cards > ul > li:has(.c-esphome):hover {
+  border-top: 3px solid var(--shs-c-esphome);
+}
+.md-typeset .grid.cards > ul > li:has(.c-wled),
+.md-typeset .grid.cards > ul > li:has(.c-wled):hover {
+  border-top: 3px solid var(--shs-c-wled);
+}
+.md-typeset .grid.cards > ul > li:has(.c-solder),
+.md-typeset .grid.cards > ul > li:has(.c-solder):hover {
+  border-top: 3px solid var(--shs-c-solder);
+}
+
+/* ---- Card photos: bleed over the card's 0.8rem padding ---- */
+.md-typeset .card-photo {
+  display: block;
+  width: calc(100% + 1.6rem);
+  max-width: calc(100% + 1.6rem);
+  margin: -0.8rem -0.8rem 0.8rem;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: 0.65rem 0.65rem 0 0;
+  border-bottom: 1px solid var(--shs-border);
+}
+
+/* ---- Class page hero image ---- */
+.md-typeset img.page-hero {
+  display: block;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border: 1px solid var(--shs-border);
+  border-radius: 0.75rem;
+}
+
+/* Keep a lone card tile-sized: auto-fill preserves empty tracks where
+   Material's auto-fit would stretch one card across the whole row. */
+.md-typeset .grid {
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}

@@ -10,7 +10,9 @@ Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspa
 
 <div class="grid cards" markdown>
 
--   **Intro to Home Assistant**
+-   ![Smart home gear for the class](assets/placeholders/intro-ha.svg){ .card-photo }
+
+    :material-home-assistant:{ .class-icon .c-ha } **Intro to Home Assistant**
 
     ---
 
@@ -24,19 +26,19 @@ Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspa
 
 <div class="coming-soon grid cards" markdown>
 
--   **ESPHome**
+-   :material-chip:{ .class-icon .c-esphome } **ESPHome**
 
     ---
 
     Turn cheap ESP32 boards into your own sensors and devices with simple YAML.
 
--   **Low-Voltage LED Lighting with WLED**
+-   :material-led-strip-variant:{ .class-icon .c-wled } **Low-Voltage LED Lighting with WLED**
 
     ---
 
     Addressable LED strips and controllers running WLED firmware: planning, power, and effects.
 
--   **Soldering**
+-   :material-soldering-iron:{ .class-icon .c-solder } **Soldering**
 
     ---
 

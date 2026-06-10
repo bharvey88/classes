@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Photo coming soon">
+  <rect width="1280" height="720" fill="#141823"/>
+  <rect x="1" y="1" width="1278" height="718" fill="none" stroke="#232839" stroke-width="2"/>
+  <g stroke="#ffb454" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45">
+    <path d="M500 372 L640 244 L780 372"/>
+    <path d="M540 336 L540 484 L740 484 L740 336"/>
+    <path d="M716 300 L716 258 L744 258"/>
+    <circle cx="640" cy="416" r="30"/>
+  </g>
+  <text x="640" y="580" text-anchor="middle" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="30" fill="#71737e">photo coming soon</text>
+</svg>
