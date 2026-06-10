@@ -10,7 +10,7 @@ Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspa
 
 <div class="grid cards" markdown>
 
--   ![Smart home gear for the class](assets/placeholders/intro-ha.svg){ .card-photo }
+-   ![Live Home Assistant data on a wall-mounted LED matrix](assets/photos/intro-ha-card.webp){ .card-photo style="object-position: center 65%" }
 
     :material-home-assistant:{ .class-icon .c-ha } **Intro to Home Assistant**
 

@@ -282,3 +282,11 @@
 .md-typeset .grid {
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
+
+/* ---- Uncropped bordered figure (e.g. diagrams, screenshots) ---- */
+.md-typeset img.page-figure {
+  display: block;
+  max-width: min(100%, 56rem);
+  border: 1px solid var(--shs-border);
+  border-radius: 0.75rem;
+}
