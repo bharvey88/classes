@@ -3,7 +3,6 @@ name: Build class materials
 on:
   push:
     branches: [main]
-    tags: ['v*']
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -14,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -23,6 +24,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends pandoc libreoffice-writer
 
+      # One block per class. To add a class: add its build lines here and a
+      # release step below, with a new rolling tag.
       - name: Build docx + pdf
         run: |
           mkdir -p dist
@@ -31,8 +34,8 @@ jobs:
             pandoc "$src" -o "dist/$out.docx"
             soffice --headless --convert-to pdf --outdir dist "dist/$out.docx"
           }
-          build docs/outline.md "Speaker-Cue-Outline"
-          build docs/handout.md "HA-Attendee-Handout"
+          build docs/intro-to-home-assistant/outline.md "Intro-to-HA-Speaker-Outline"
+          build docs/intro-to-home-assistant/handout.md "Intro-to-HA-Attendee-Handout"
           ls -la dist
 
       - name: Upload build artifacts
@@ -41,8 +44,18 @@ jobs:
           name: class-materials
           path: dist/*
 
-      - name: Attach to release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v3
-        with:
-          files: dist/*
+      - name: Refresh rolling release (intro-ha)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          tag="intro-ha"
+          title="Intro to Home Assistant (latest build)"
+          notes="Current speaker outline and attendee handout, rebuilt automatically on every change. Last updated: $(date -u +%Y-%m-%d)."
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release edit "$tag" --notes "$notes"
+          else
+            gh release create "$tag" --title "$title" --notes "$notes"
+          fi
+          gh release upload "$tag" \
+            dist/Intro-to-HA-Speaker-Outline.docx dist/Intro-to-HA-Speaker-Outline.pdf \
+            dist/Intro-to-HA-Attendee-Handout.docx dist/Intro-to-HA-Attendee-Handout.pdf \
+            --clobber
