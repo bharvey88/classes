@@ -1,64 +1,50 @@
-# Intro to Home Assistant
+# SmartHomeSellout Classes
 
-*Smart Homes Done the Right Way*
+Free, hands-on classes by **Brandon Harvey** (SmartHomeSellout), first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Read them online, download print versions, or fork this repo and teach your own.
 
-A **Home Assistant** class built for complete beginners and first taught at the [Dallas Makerspace](https://dallasmakerspace.org). Everything is here so you can **follow along, or fork it and teach your own version** at your local makerspace, library, or hackerspace.
+**Read online: [classes.smarthomesellout.com](https://classes.smarthomesellout.com/)**
 
-## Read it online
+## The classes
 
-**→ [classes.smarthomesellout.com](https://classes.smarthomesellout.com/)** — a clean, searchable site with clickable links (no download needed).
+| Class | Status | Materials |
+| --- | --- | --- |
+| [Intro to Home Assistant](https://classes.smarthomesellout.com/intro-to-home-assistant/) | Live | [Speaker outline](docs/intro-to-home-assistant/outline.md) · [Attendee handout](docs/intro-to-home-assistant/handout.md) |
+| ESPHome | Planned | |
+| Low-Voltage LED Lighting with WLED | Planned | |
+| Soldering | Planned | |
 
-## What's in here
+## Downloads
 
-| File | What it is |
-| --- | --- |
-| [`docs/outline.md`](docs/outline.md) | The full **speaker cue outline** — every block, timing, and talking-point cue for presenting the class. |
-| [`docs/handout.md`](docs/handout.md) | The **attendee take-home guide** — gear picks, protocol cheat-sheet, links, and ideas. |
+Every class has a rolling release with its current docx and PDF builds, refreshed automatically on every change. For Intro to Home Assistant: [the `intro-ha` release](https://github.com/bharvey88/classes/releases/tag/intro-ha).
 
-Both are plain Markdown. Edit them and the **website**, plus the formatted **`.docx` and `.pdf`** versions, all rebuild automatically (see below).
+## How it works
 
-## Download the printable versions
+Each class is a folder of plain Markdown under `docs/`. Two GitHub Actions workflows run on every push to `main`:
 
-Grab the latest Word and PDF builds from the [**Releases**](../../releases/latest) page:
-
-- `Speaker-Cue-Outline.docx` / `.pdf`
-- `HA-Attendee-Handout.docx` / `.pdf`
-
-## How the build works
-
-Two GitHub Actions workflows run on every push:
-
-- **[Website](.github/workflows/pages.yml)** — builds the Markdown into a [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) site and deploys it to GitHub Pages.
-- **[Documents](.github/workflows/build.yml)** — converts the Markdown to `.docx` (via [pandoc](https://pandoc.org)) and then to `.pdf` (via LibreOffice). Tag a release and the four files are attached to it automatically:
-
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-You can also download the build artifacts from any workflow run under the **Actions** tab.
+- **Website** (`.github/workflows/pages.yml`): builds the Markdown into an [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) site and deploys it to GitHub Pages.
+- **Documents** (`.github/workflows/build.yml`): converts each class's outline and handout to docx (via [pandoc](https://pandoc.org)) and PDF (via LibreOffice), then refreshes that class's rolling release.
 
 ### Build locally (optional)
 
-If you have `pandoc` and `libreoffice` installed:
-
 ```bash
-# Documents
-pandoc docs/outline.md -o Speaker-Cue-Outline.docx
-soffice --headless --convert-to pdf Speaker-Cue-Outline.docx
-pandoc docs/handout.md -o HA-Attendee-Handout.docx
-soffice --headless --convert-to pdf HA-Attendee-Handout.docx
+# Website
+python3 -m venv .venv
+.venv/bin/pip install "mkdocs-material==9.*" mkdocs-redirects
+.venv/bin/mkdocs serve   # preview at http://127.0.0.1:8000
 
-# Website (needs: pip install mkdocs-material)
-mkdocs serve   # preview at http://127.0.0.1:8000
+# Documents (needs pandoc and libreoffice)
+pandoc docs/intro-to-home-assistant/outline.md -o Intro-to-HA-Speaker-Outline.docx
+soffice --headless --convert-to pdf Intro-to-HA-Speaker-Outline.docx
 ```
 
-## Make it your own
+## Teach your own
 
 1. **Fork** this repo.
-2. Edit `docs/outline.md` and `docs/handout.md` — swap in your own gear, stories, and demos.
-3. Push (or tag a release) and the site + documents rebuild for you.
+2. Edit a class's Markdown (or copy a class folder to start a new one), swapping in your own gear, stories, and demos.
+3. Push, and the site and documents rebuild for you.
+
+One rule: outline and handout files stay plain Markdown (no HTML, no theme-specific syntax) because the same files feed the docx/PDF builds.
 
 ## License
 
-Content is licensed under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE) — use it, remix it, teach with it. Just keep an attribution back to this project.
+Content is licensed under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE): use it, remix it, teach with it. Just keep an attribution back to this project.
