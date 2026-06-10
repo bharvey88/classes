@@ -33,6 +33,14 @@
   --shs-border-strong: #323a4f;
   --shs-accent: #ffb454;
   --shs-accent-ink: #1a1409;
+
+  /* Variables Material's stock CSS consumes that 'custom' palettes must define */
+  --md-accent-fg-color--transparent: #ffb45426;
+  --md-accent-bg-color: #1a1409;
+  --md-primary-fg-color--light: #1a1f2e;
+  --md-primary-fg-color--dark: #0d0f17;
+  --md-primary-bg-color--light: rgba(240, 238, 233, 0.54);
+  --md-footer-fg-color--lighter: #71737e;
 }
 
 /* ---- Light scheme (toggle) ---- */
@@ -63,6 +71,14 @@
   --shs-border-strong: #c9c3b4;
   --shs-accent: #ffb454;
   --shs-accent-ink: #1a1409;
+
+  /* Variables Material's stock CSS consumes that 'custom' palettes must define */
+  --md-accent-fg-color--transparent: #9b5d0026;
+  --md-accent-bg-color: #faf9f6;
+  --md-primary-fg-color--light: #f2efe9;
+  --md-primary-fg-color--dark: #f2efe9;
+  --md-primary-bg-color--light: rgba(27, 25, 20, 0.54);
+  --md-footer-fg-color--lighter: #8b8779;
 }
 
 /* ---- Kill Material's elevation shadows everywhere ---- */
@@ -140,7 +156,8 @@
   border-radius: 0.75rem;
   color: var(--md-default-fg-color);
 }
-.md-typeset .md-button:hover {
+.md-typeset .md-button:hover,
+.md-typeset .md-button:focus {
   background: var(--shs-surface-hover);
   border-color: var(--shs-border-strong);
   color: var(--md-default-fg-color);
@@ -150,7 +167,8 @@
   border-color: var(--shs-accent);
   color: var(--shs-accent-ink);
 }
-.md-typeset .md-button--primary:hover {
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
   background: var(--shs-accent);
   border-color: var(--shs-accent);
   color: var(--shs-accent-ink);
@@ -167,13 +185,25 @@
   background: var(--shs-surface);
 }
 
-/* ---- Admonitions (site-only pages): flat, single accent ---- */
+/* ---- Admonitions (site-only pages): flat, single accent ----
+   [class] bumps specificity to (0,3,0) so these beat Material's
+   per-type rules (.md-typeset .admonition.note etc.). */
+.md-typeset .admonition[class],
+.md-typeset details[class],
 .md-typeset .admonition,
 .md-typeset details {
   border: 1px solid var(--shs-border);
   border-left: 3px solid var(--shs-accent);
   border-radius: 0.5rem;
   box-shadow: none;
+}
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background-color: var(--shs-surface);
+}
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--shs-accent);
 }
 
 /* ---- Footer ---- */
