@@ -63,7 +63,7 @@ UniFi & UniFi Protect (network presence + cameras) · WLED · Z-Wave · ESPHome 
 - **WLED**: <https://kno.wled.ge> · **Frigate**: <https://frigate.video>
 - **Shelly**: <https://www.shelly.com> · **Fully Kiosk**: <https://www.fully-kiosk.com>
 - **Communities**: r/homeassistant, r/esphome, and the ESPHome Discord
-- **YouTube**: digiblur (technically rigorous). Watch out: many "influencers" push sponsored gear, and HA moves fast so old videos go stale, so always check the date and the official docs.
+- **YouTube**: digiblur (technically rigorous). Watch out: many "influencers" push sponsored gear. HA also moves fast and old videos go stale, so check the date and the official docs.
 
 ## Support the Volunteers
 

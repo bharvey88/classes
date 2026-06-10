@@ -85,7 +85,7 @@
     - **GIVEAWAY: ZBT-2** (Zigbee coordinator) (use the picker)
 - **Wi-Fi / Ethernet**: direct IP, no hub
 - **Bluetooth / BLE**: short range, passive sensors, proxies
-- **Thread & Matter**: honest but gentle: promising, but still working through the firmware/reliability growing pains that Zigbee and Z-Wave already sorted out years ago. Beginners can wait.
+- **Thread & Matter**: honest but gentle. Promising, but still working through firmware/reliability growing pains that Zigbee and Z-Wave sorted out years ago. Beginners can wait.
 
 **Bulbs vs Switches vs Relays (~5 min)**
 
