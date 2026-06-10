@@ -261,7 +261,7 @@
   width: calc(100% + 1.6rem);
   max-width: calc(100% + 1.6rem);
   margin: -0.8rem -0.8rem 0.8rem;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 2 / 1;
   object-fit: cover;
   border-radius: 0.65rem 0.65rem 0 0;
   border-bottom: 1px solid var(--shs-border);
