@@ -12,7 +12,17 @@
 
 ## Integrations to Explore
 
-UniFi & UniFi Protect (network presence + cameras) · WLED · Z-Wave · ESPHome · Alarmo (free alarm system) · BTHome (local Bluetooth sensors) · Frigate (local AI camera detection) · HomeKit Device (pair Wi-Fi devices via HomeKit) · HomeKit Bridge (push HA out to Siri) · Plex · Team Tracker (light effects when your team scores)
+- **UniFi / UniFi Protect**: network presence detection plus your cameras
+- **WLED**: addressable LEDs; runs on LED controllers and certain smart bulbs
+- **Z-Wave**: bring your Z-Wave gear into HA
+- **ESPHome**: your own DIY sensors and devices into HA
+- **Alarmo**: a full alarm system, free
+- **BTHome**: local Bluetooth sensors, no cloud
+- **Frigate**: local AI camera and object detection
+- **HomeKit Device**: pair Wi-Fi devices into HA via the HomeKit protocol
+- **HomeKit Bridge**: push HA devices out to Apple Home for Siri control
+- **Plex**: play media on your TVs as part of morning and night routines
+- **Team Tracker**: flash the lights when your team scores; pair with a HUB75 LED matrix for a DIY scoreboard
 
 ## Protocols at a Glance
 
