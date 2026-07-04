@@ -36,9 +36,11 @@
 
 ## Bulbs vs. Switches vs. Relays
 
+This is the buying decision beginners get wrong most often, so get it right before you spend money:
+
 - Smart bulbs: per-bulb color & dimming, but if someone flips the wall switch the bulb loses power.
 - Smart switches: replace the wall switch, keep normal bulbs, the wall still works for everyone.
-- In-wall relays (Shelly): hide behind your existing switch; best for retrofits and dumb fixtures.
+- In-wall relays (Zooz or Shelly): hide behind your existing switch; best for retrofits and dumb fixtures.
 
 **Rule of thumb:** switches & relays keep the wall working for family and guests; bulbs are for color everywhere.
 
@@ -47,7 +49,7 @@
 - **Z-Wave controller:** Home Assistant Connect ZWA-2 (the best, by far)
 - **Zigbee coordinator:** Home Assistant Connect ZBT-2
 - **Zigbee devices:** Philips Hue bulbs (pair straight to Zigbee2MQTT, no Hue bridge), Aqara (T1M, door/window sensors, Magic Cube), Third Reality
-- **In-wall / Wi-Fi:** Shelly relays
+- **In-wall relays:** Zooz (Z-Wave) or Shelly (Wi-Fi); Shelly is the popular pick
 - **LEDs:** WLED (on bulbs or LED controllers); a HUB75 matrix for DIY scoreboards
 - **Voice:** Home Assistant Voice Preview Edition (local, but takes setup to rival Alexa/Google today)
 

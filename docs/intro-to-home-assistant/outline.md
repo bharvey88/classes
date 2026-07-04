@@ -87,12 +87,13 @@
 - **Bluetooth / BLE**: short range, passive sensors, proxies
 - **Thread & Matter**: honest but gentle. Promising, but still working through firmware/reliability growing pains that Zigbee and Z-Wave sorted out years ago. Beginners can wait.
 
-**Bulbs vs Switches vs Relays (~5 min)**
+## Bulbs vs Switches vs Relays (~5 min)
 
+- Frame it as its own moment: this is the buying decision beginners get wrong most often
 - **Smart bulbs**: per-bulb color + dimming; downside: flip the wall switch and the bulb loses power and vanishes from HA
 - **Smart switches**: replace the wall switch, keep normal bulbs, physical switch still works (spouse-friendly); no per-bulb color
-- **In-wall relays (Shelly)**: hide behind your existing switch; keep the fixture and wall control, just add brains. Best for retrofits and dumb fixtures
-- Each comes in Zigbee / Z-Wave / Wi-Fi (Shelly is the Wi-Fi go-to)
+- **In-wall relays (Zooz, Shelly)**: hide behind your existing switch; keep the fixture and wall control, just add brains. Best for retrofits and dumb fixtures
+- Each comes in Zigbee / Z-Wave / Wi-Fi (Zooz for Z-Wave, Shelly for Wi-Fi; Shelly is the popular pick)
 - **Rule of thumb:** switches & relays keep the wall working for family/guests; bulbs are for color everywhere
 
 ## Q&A Stop 1 (3 min)
