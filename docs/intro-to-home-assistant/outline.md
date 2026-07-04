@@ -102,13 +102,13 @@ Short questions on the spot, longer ones parked to the end.
 
 ## Block 6: Live HA Demo (10 min)
 
-- Onboarding walkthrough
+- No onboarding walkthrough: start in a working system, that's what sells it
 - **Dashboard deep-dive**: sections, cards, building a view they'd actually use at home (skip the menu tour)
 - **HACS (Home Assistant Community Store)**: custom cards, themes, community integrations beyond what's built in
     - Live: download a theme, **Catppuccin Macchiato** (cut if running long)
     - Light caveat: third-party, install sparingly
 - **Companion app (iOS/Android)**: install, sign in, presence/device tracking, push notifications
-- **Add an integration live**: keep it simple: AirNow (air quality)
+- **Adding integrations**: don't add one live (most want an account or API key, dead air on stage). Just say it's a couple of clicks in Settings and point at the list.
 - **Create a simple automation**: turn a light on/off with a Zigbee button (may change later)
 - Show the App store
 
