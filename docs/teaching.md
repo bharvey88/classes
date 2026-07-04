@@ -14,7 +14,8 @@ Your fork is fully yours. Change the gear list, swap my stories for yours, renam
 
 1. **Create a free GitHub account** at [github.com/signup](https://github.com/signup) if you don't have one.
 2. **[Click here to fork the classes repo](https://github.com/bharvey88/classes/fork)**, then press the green **Create fork** button. GitHub copies everything into your account.
-3. **Delete the file `docs/CNAME`** in your fork. It points at *my* web address, and your copy of the site won't publish until it's gone. Open the file on GitHub, click the trash-can icon, and commit the change. (If you own a domain and want your site on it, put your domain in that file instead.)
+
+That's it. Everything from here on happens inside your copy.
 
 ## Edit a class
 
@@ -39,7 +40,7 @@ Your fork can have its own free site like this one:
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 3. Go to the **Actions** tab. If GitHub asks you to enable workflows, do it, then run the **Deploy site** workflow (or just commit any edit).
 
-A few minutes later your site is live at `https://YOUR-USERNAME.github.io/classes/`.
+A few minutes later your site is live at `https://YOUR-USERNAME.github.io/classes/`. (If you own a domain and want the site on it, add it under **Settings → Pages → Custom domain** once the site is up.)
 
 One more polish step: edit `mkdocs.yml` (in the top folder of your fork) and change `site_url`, `repo_url`, and `repo_name` to point at your fork instead of mine. The site works without this, but its "edit" links will point at me until you do.
 

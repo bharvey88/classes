@@ -29,6 +29,7 @@
 - **Must be present to win.** The drawing happens at the end of the night.
 - Winner picked live by the random-number roller you just saw.
 - Milk the mystery: mention the box exists, don't open it, move on.
+- **Put the class URL on screen** (classes.smarthomesellout.com): *"Everything tonight is on this site. The handout has every link and gear pick, so follow along on your phone if you want. Nobody needs to take notes."*
 
 ## Block 2: What is Home Assistant? (8 min)
 
