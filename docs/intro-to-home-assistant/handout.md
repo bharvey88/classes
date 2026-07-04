@@ -10,6 +10,10 @@
 - **Raspberry Pi**: popular and well-documented
 - **Mini PC or old laptop**: needs 6th-gen Intel or newer (a laptop works even with no screen). Lenovo M910q, or a new N100/N150 mini PC off Amazon.
 
+## Integrations to Explore
+
+UniFi & UniFi Protect (network presence + cameras) · WLED · Z-Wave · ESPHome · Alarmo (free alarm system) · BTHome (local Bluetooth sensors) · Frigate (local AI camera detection) · HomeKit Device (pair Wi-Fi devices via HomeKit) · HomeKit Bridge (push HA out to Siri) · Plex · Team Tracker (light effects when your team scores)
+
 ## Protocols at a Glance
 
 | Protocol | Good for | What you need |
@@ -37,9 +41,10 @@
 - **LEDs:** WLED (on bulbs or LED controllers); a HUB75 matrix for DIY scoreboards
 - **Voice:** Home Assistant Voice Preview Edition (local, but takes setup to rival Alexa/Google today)
 
-## Integrations to Explore
+## From the Live Demo
 
-UniFi & UniFi Protect (network presence + cameras) · WLED · Z-Wave · ESPHome · Alarmo (free alarm system) · BTHome (local Bluetooth sensors) · Frigate (local AI camera detection) · HomeKit Device (pair Wi-Fi devices via HomeKit) · HomeKit Bridge (push HA out to Siri) · Plex · Team Tracker (light effects when your team scores)
+- **Companion app (iOS/Android)**: your phone becomes a presence tracker and gets the notifications. Install it early, it makes everything else better.
+- **HACS**: the community store for custom dashboard cards, themes, and integrations. Third-party, so install sparingly.
 
 ## Cool Things You Can Build
 
@@ -50,7 +55,6 @@ UniFi & UniFi Protect (network presence + cameras) · WLED · Z-Wave · ESPHome 
 ## Go Further
 
 - **ESPHome**: turn cheap ESP32 chips into your own HA sensors with simple YAML. (An ESPHome class is coming, watch for it.)
-- **HACS**: the community store for custom dashboard cards, themes, and integrations.
 - **Wall tablets + Fully Kiosk**: a cheap tablet as a wall dashboard that wakes on motion.
 - **Claude Code + the HA MCP**: an AI agent that builds dashboards and automations for you, just by asking.
 
