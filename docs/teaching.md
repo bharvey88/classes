@@ -1,21 +1,54 @@
 # Teach these classes
 
-Every class on this site is plain Markdown in a [public GitHub repo](https://github.com/bharvey88/classes), licensed [CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE). Fork it, swap in your own gear and stories, and teach it at your makerspace, library, or hackerspace.
+Every class on this site is free to copy, change, and teach. The license ([CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE)) asks one thing: keep a credit link back to [the project](https://github.com/bharvey88/classes) somewhere.
 
-## How
+You don't need to be a programmer. If you can edit a document in a web browser, you can run your own version of a class at your makerspace, library, or user group.
 
-1. [Fork the repo](https://github.com/bharvey88/classes/fork).
-2. Edit the class's Markdown under `docs/` (for example `docs/intro-to-home-assistant/`).
-3. Push. GitHub Actions rebuilds the website and the printable documents for you.
+## What "forking" means
 
-## How the builds work
+These classes live on GitHub, a site where people share projects as folders of plain text files. A **fork** is your own copy of a project, attached to your own account.
 
-Each class folder holds a speaker outline and an attendee handout. Those two Markdown files become both the pages on this site and the docx/PDF downloads, rebuilt on every push.
+Your fork is fully yours. Change the gear list, swap my stories for yours, rename the whole thing. My original stays untouched, and you don't need my permission. That's the point of publishing it this way.
 
-One rule: keep `outline.md` and `handout.md` plain Markdown, with no HTML or theme-specific syntax, so the print versions stay clean.
+## Make your copy (about 5 minutes)
 
-The [repo README](https://github.com/bharvey88/classes#readme) covers local previews and the rest of the plumbing.
+1. **Create a free GitHub account** at [github.com/signup](https://github.com/signup) if you don't have one.
+2. **[Click here to fork the classes repo](https://github.com/bharvey88/classes/fork)**, then press the green **Create fork** button. GitHub copies everything into your account.
+3. **Delete the file `docs/CNAME`** in your fork. It points at *my* web address, and your copy of the site won't publish until it's gone. Open the file on GitHub, click the trash-can icon, and commit the change. (If you own a domain and want your site on it, put your domain in that file instead.)
 
-## License
+## Edit a class
 
-[CC BY 4.0](https://github.com/bharvey88/classes/blob/main/LICENSE): use it, remix it, teach with it, as long as you keep an attribution link back to the repo.
+Each class is one folder under `docs/`. For Intro to Home Assistant that's `docs/intro-to-home-assistant/`, and the two files that matter are:
+
+- `outline.md`: the speaker outline, what you say and when
+- `handout.md`: the take-home guide attendees keep
+
+To edit one, open it on GitHub and click the **pencil icon** in the top right. The files are Markdown, which is just text with a little punctuation for formatting: `#` makes a heading, `**bold**` makes bold, `-` makes a bullet. You'll pick it up by looking at what's already there.
+
+When you're done, click **Commit changes**. That's "save" in GitHub speak.
+
+Swap in your own venue, your own demo devices, your own automation stories. The class lands because the examples are real, so make them yours.
+
+One rule: keep `outline.md` and `handout.md` plain Markdown, no HTML or theme-specific syntax. The same files also become the printable docx and PDF versions, and anything fancier turns into garbage in print.
+
+## Publish your website
+
+Your fork can have its own free site like this one:
+
+1. In your fork, go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Go to the **Actions** tab. If GitHub asks you to enable workflows, do it, then run the **Deploy site** workflow (or just commit any edit).
+
+A few minutes later your site is live at `https://YOUR-USERNAME.github.io/classes/`.
+
+One more polish step: edit `mkdocs.yml` (in the top folder of your fork) and change `site_url`, `repo_url`, and `repo_name` to point at your fork instead of mine. The site works without this, but its "edit" links will point at me until you do.
+
+## Get printable handouts
+
+Every time you commit a change to a class, GitHub rebuilds that class's Word and PDF files automatically and attaches them to a rolling release (for example [`intro-ha`](https://github.com/bharvey88/classes/releases/tag/intro-ha) on my copy; your fork gets its own). Download the handout from your fork's **Releases** page, print it, hand it out.
+
+The [repo README](https://github.com/bharvey88/classes#readme) covers local previews and the rest of the plumbing, if you want it.
+
+## Stuck?
+
+[Open an issue](https://github.com/bharvey88/classes/issues) on the original project and I'll try to help. And if you teach one of these, tell me how it went. I'd genuinely like to hear.

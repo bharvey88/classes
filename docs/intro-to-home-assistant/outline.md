@@ -12,7 +12,7 @@
 - Dashboard already live on screen
 - Fire something visual + physical in front of them
 - Let "wait, what is that?" hang → *"Let me show you how we got here."*
-- Plant the giveaway picker: show a premade "winner picker" card: *"Rolls a random number. We'll use it a few times tonight, hang on to your ticket."*
+- Plant the giveaway picker: show a premade "winner picker" card: *"Rolls a random number. Remember this card, it comes back at the end of the night. Hang on to your ticket."*
 
 **Demo options to pick from later:**
 
@@ -25,9 +25,10 @@
 
 ## Giveaway Announcement (~1 min)
 
-- *"Nabu Casa sent us four things to give away tonight: an HA Green, a ZWA-2 Z-Wave controller, a ZBT-2 Zigbee coordinator, and a Voice Preview Edition."*
-- **Must be present to win.** Drawings happen throughout as each one comes up.
+- *"One of you is taking something home tonight. I'm not telling you what it is until the drawing."*
+- **Must be present to win.** The drawing happens at the end of the night.
 - Winner picked live by the random-number roller you just saw.
+- Milk the mystery: mention the box exists, don't open it, move on.
 
 ## Block 2: What is Home Assistant? (8 min)
 
@@ -52,7 +53,6 @@
     - **Heads up:** mini PCs used to be a lot cheaper before the AI boom drove demand up
     - **N100/N150 mini PCs**: new off Amazon, great value + headroom
 - Why we're skipping Docker / venv / manual today
-- **GIVEAWAY: HA Green:** *"the exact thing I'm recommending, let's roll for it right now."* (use the picker)
 
 ## Block 4: Core Concepts + Good Integrations (13 min)
 
@@ -76,13 +76,12 @@
 
 - **Z-Wave**: mesh, licensed spectrum, very reliable, needs a controller
     - **Best controller by far: Home Assistant Connect ZWA-2** (not a generic Zooz stick)
-    - **GIVEAWAY: ZWA-2** (use the picker)
 - **Zigbee**: mesh, open standard, huge ecosystem, needs a coordinator
     - **ZHA** (built-in) vs **Zigbee2MQTT** (independent, broadest device support)
     - Your story: Hue bulbs paired straight to Z2M, no bridge, no account, no cloud
     - Gear: Hue bulbs, Aqara (T1M, door/window sensors, Magic Cube), Third Reality
     - **New IKEA stuff**: newer Thread-era devices can still pair over Zigbee via Z2M (verify models)
-    - **GIVEAWAY: ZBT-2** (Zigbee coordinator) (use the picker)
+    - Recommended coordinator: **Home Assistant Connect ZBT-2**
 - **Wi-Fi / Ethernet**: direct IP, no hub
 - **Bluetooth / BLE**: short range, passive sensors, proxies
 - **Thread & Matter**: honest but gentle. Promising, but still working through firmware/reliability growing pains that Zigbee and Z-Wave sorted out years ago. Beginners can wait.
@@ -102,7 +101,7 @@ Short questions on the spot, longer ones parked to the end.
 ## Block 6: Live HA Demo (10 min)
 
 - Onboarding walkthrough
-- **Dashboard deep-dive**: sections, cards, building a usable view (not just a tour)
+- **Dashboard deep-dive**: sections, cards, building a view they'd actually use at home (skip the menu tour)
 - **HACS (Home Assistant Community Store)**: custom cards, themes, community integrations beyond what's built in
     - Live: download a theme, **Catppuccin Macchiato** (cut if running long)
     - Light caveat: third-party, install sparingly
@@ -146,7 +145,6 @@ Short questions on the spot, longer ones parked to the end.
 
 - **HA Voice Preview Edition**: local voice assistant hardware
     - Honest caveat: replacing/mimicking Alexa or Google takes real manual setup today, not plug-and-play yet
-    - **GIVEAWAY: Voice PE** (use the picker; if you like, have the Voice PE announce its own winner out loud; cut the gag if running long)
 - **Wall tablets + Fully Kiosk**: cheap tablet as a wall-mounted dashboard
     - Fully Kiosk handles screen on/off (motion wake) + locked-down kiosk mode
 
@@ -166,6 +164,13 @@ Short questions on the spot, longer ones parked to the end.
 - **Influencer warning**: sponsorships/affiliate links, cross-reference the community
 - **Content decay warning**: HA moves fast, check dates, go straight to official docs
 
+## The Giveaway Drawing (~2 min)
+
+- Callback: *"Remember the picker from the very first thing you saw tonight?"*
+- Reveal the prize now, then roll for the winner.
+- Don't write the actual item in this outline. The outline is public and the mystery is the fun part.
+- If the prize happens to be something with a voice, letting it announce its own winner is a great reveal (cut the gag if running long).
+
 ## Q&A Stop 2 (8 min)
 
-*Running time: ~94 min content + 5 break ≈ 100 min, scheduled in a 2-hour slot. Q&A, giveaways, and overruns live in the buffer.*
+*Running time: ~94 min content + 5 break ≈ 100 min, scheduled in a 2-hour slot. Q&A, the drawing, and overruns live in the buffer.*
