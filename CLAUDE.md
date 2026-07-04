@@ -19,10 +19,11 @@ Catalog of classes Brandon Harvey teaches at Dallas Makerspace, published at cla
 
 ## Design rules
 
-Tokens in `extra.css` mirror smarthomesellout.com's `src/styles/global.css` (the 2026-06 de-slop redesign). If the main site's tokens change, update `extra.css` to match.
+Tokens in `extra.css` started as a mirror of smarthomesellout.com's `src/styles/global.css` (the 2026-06 de-slop redesign). On 2026-07-04 Brandon switched this site's accent from amber to teal; the blog has NOT been ported yet, so the sites intentionally diverge until that session happens.
 
-- Dark default, light toggle. ONE brand accent: amber `#ffb454` (`#9b5d00` for text links in light mode).
-- Each class additionally has an identity color, used ONLY for its card top border and icon: HA amber, ESPHome teal, WLED violet, soldering green (`--shs-c-*` in extra.css, both schemes). These mirror the main site's data colors. Everything else stays amber.
+- Dark default, light toggle. ONE brand accent: teal `#39c5cf` (`#0c7d87` for text links in light mode).
+- Each class additionally has an identity color, used ONLY for its card top border and icon: HA amber, ESPHome teal, WLED violet, soldering green (`--shs-c-*` in extra.css, both schemes). Known issue: ESPHome's identity teal now matches the site accent; give ESPHome a new hue (possibly amber) before its class goes live.
+- The hub features the live class in a full-width `.feature-card` (raw `<img class="feature-photo">` + `.feature-body` div; markdown wraps the img in a `<p>`, which the CSS relies on). Coming-soon classes stay as compact muted grid cards.
 - Class cards carry a photo (`.card-photo`) and the class page a hero image (`.page-hero`). Real photos preferred; flat SVG placeholders live in `docs/assets/placeholders/` until Brandon supplies them. Swap a placeholder by replacing the image link on the hub and class page (or overwriting the file if the format matches).
 - Flat 1px borders, 0.75rem radius. Never add box shadows, gradients, glow, or extra accent colors beyond the class identity colors above.
 - Headings: Space Grotesk. Body: Inter. Code: JetBrains Mono.

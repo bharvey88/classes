@@ -6,20 +6,19 @@ hide:
 
 # Classes
 
-Free, hands-on classes I teach at the [Dallas Makerspace](https://dallasmakerspace.org). Read them online or download the print versions.
+Free, hands-on classes I teach live at the [Dallas Makerspace](https://dallasmakerspace.org). Follow along in class, keep the handout, or [fork a class](teaching.md) and teach it at your own space.
 
-<div class="grid cards" markdown>
+<div class="feature-card" markdown>
+<img src="assets/photos/intro-ha-card.webp" class="feature-photo" alt="Live Home Assistant data on a wall-mounted LED matrix" />
+<div class="feature-body" markdown>
 
--   ![Live Home Assistant data on a wall-mounted LED matrix](assets/photos/intro-ha-card.webp){ .card-photo }
+## :material-home-assistant:{ .class-icon .c-ha } Intro to Home Assistant
 
-    :material-home-assistant:{ .class-icon .c-ha } **Intro to Home Assistant**
+Every smart device in one app that runs in your own house instead of a vendor's cloud. Two hours, live demos, zero background needed.
 
-    ---
+[Go to the class](intro-to-home-assistant/index.md){ .md-button .md-button--primary }
 
-    Every smart device in one app that runs in your own house instead of a vendor's cloud. Two hours, live demos, zero background needed.
-
-    [Go to the class](intro-to-home-assistant/index.md){ .md-button .md-button--primary }
-
+</div>
 </div>
 
 ## Coming soon

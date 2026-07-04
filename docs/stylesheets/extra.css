@@ -16,8 +16,8 @@
 
   --md-primary-fg-color: #11141d;   /* header / nav chrome */
   --md-primary-bg-color: #f0eee9;   /* text on header */
-  --md-accent-fg-color: #ffb454;
-  --md-typeset-a-color: #ffb454;
+  --md-accent-fg-color: #39c5cf;
+  --md-typeset-a-color: #39c5cf;
 
   --md-code-bg-color: #141823;
   --md-code-fg-color: #f0eee9;
@@ -31,12 +31,12 @@
   --shs-surface-hover: #1a1f2e;
   --shs-border: #232839;
   --shs-border-strong: #323a4f;
-  --shs-accent: #ffb454;
-  --shs-accent-ink: #1a1409;
+  --shs-accent: #39c5cf;
+  --shs-accent-ink: #06282b;
 
   /* Variables Material's stock CSS consumes that 'custom' palettes must define */
-  --md-accent-fg-color--transparent: #ffb45426;
-  --md-accent-bg-color: #1a1409;
+  --md-accent-fg-color--transparent: #39c5cf26;
+  --md-accent-bg-color: #06282b;
   --md-primary-fg-color--light: #1a1f2e;
   --md-primary-fg-color--dark: #0d0f17;
   --md-primary-bg-color--light: rgba(240, 238, 233, 0.54);
@@ -53,9 +53,9 @@
 
   --md-primary-fg-color: #ffffff;
   --md-primary-bg-color: #1b1914;
-  /* Amber text fails contrast on white; links darken, fills stay amber. */
-  --md-accent-fg-color: #9b5d00;
-  --md-typeset-a-color: #9b5d00;
+  /* Bright teal text fails contrast on white; links darken, fills stay teal. */
+  --md-accent-fg-color: #0c7d87;
+  --md-typeset-a-color: #0c7d87;
 
   --md-code-bg-color: #f2efe9;
   --md-code-fg-color: #1b1914;
@@ -69,11 +69,11 @@
   --shs-surface-hover: #f2efe9;
   --shs-border: #e3dfd5;
   --shs-border-strong: #c9c3b4;
-  --shs-accent: #ffb454;
-  --shs-accent-ink: #1a1409;
+  --shs-accent: #39c5cf;
+  --shs-accent-ink: #06282b;
 
   /* Variables Material's stock CSS consumes that 'custom' palettes must define */
-  --md-accent-fg-color--transparent: #9b5d0026;
+  --md-accent-fg-color--transparent: #0c7d8726;
   --md-accent-bg-color: #faf9f6;
   --md-primary-fg-color--light: #f2efe9;
   --md-primary-fg-color--dark: #f2efe9;
@@ -142,12 +142,64 @@
   border-bottom: 1px solid var(--shs-border);
 }
 
-/* Coming-soon cards: muted, non-interactive */
+/* Coming-soon cards: muted, non-interactive, compact */
 .md-typeset .coming-soon.grid.cards > ul > li {
-  opacity: 0.6;
+  opacity: 0.55;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.64rem;
 }
 .md-typeset .coming-soon.grid.cards > ul > li:hover {
   border-color: var(--shs-border);
+}
+
+/* ---- Featured class card: full-width, photo beside text ---- */
+.md-typeset .feature-card {
+  display: flex;
+  align-items: stretch;
+  background: var(--shs-surface);
+  border: 1px solid var(--shs-border);
+  border-top: 3px solid var(--shs-c-ha);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 1.6em 0;
+}
+/* markdown wraps the raw <img> in a <p>; that <p> is the flex child */
+.md-typeset .feature-card > p {
+  margin: 0;
+  flex: 0 0 44%;
+  display: flex;
+}
+.md-typeset .feature-card img.feature-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  border-right: 1px solid var(--shs-border);
+}
+.md-typeset .feature-card .feature-body {
+  padding: 0.6rem 1.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.md-typeset .feature-card .feature-body h2 {
+  margin: 0.6em 0 0.4em;
+}
+@media (max-width: 44em) {
+  .md-typeset .feature-card {
+    flex-direction: column;
+  }
+  .md-typeset .feature-card > p {
+    flex: none;
+    width: 100%;
+  }
+  .md-typeset .feature-card img.feature-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    border-right: none;
+    border-bottom: 1px solid var(--shs-border);
+  }
 }
 
 /* ---- Buttons ---- */
