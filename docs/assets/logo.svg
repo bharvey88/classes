@@ -1,4 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="SmartHomeSellout Classes">
-  <rect width="32" height="32" rx="7" fill="#141823"/>
-  <path d="M19.8 6.5 12.2 25.5" stroke="#ffb454" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SmartHomeSellout Classes">
+  <rect width="512" height="512" rx="112" fill="#0d0f17"/>
+  <path d="M162 430 V316 L256 230 L350 316 V430 Z" fill="none" stroke="#39c5cf" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M204 170 A 74 74 0 0 1 308 170" fill="none" stroke="#39c5cf" stroke-width="24" stroke-linecap="round"/>
+  <path d="M168 132 A 124 124 0 0 1 344 132" fill="none" stroke="#39c5cf" stroke-width="24" stroke-linecap="round"/>
+  <path d="M205 396 H307 V346 H282 V322 H230 V346 H205 Z" fill="none" stroke="#39c5cf" stroke-width="14" stroke-linejoin="round"/>
+  <g stroke="#39c5cf" stroke-width="5.5">
+    <line x1="221" y1="393" x2="221" y2="374"/><line x1="231" y1="393" x2="231" y2="374"/>
+    <line x1="241" y1="393" x2="241" y2="374"/><line x1="251" y1="393" x2="251" y2="374"/>
+    <line x1="261" y1="393" x2="261" y2="374"/><line x1="271" y1="393" x2="271" y2="374"/>
+    <line x1="281" y1="393" x2="281" y2="374"/><line x1="291" y1="393" x2="291" y2="374"/>
+  </g>
+  <path d="M256 230 Q 266 222 274 230" fill="none" stroke="#39c5cf" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(272 231) rotate(64) scale(1.04)">
+    <path d="M0 0 L44 -26 H118 A14 14 0 0 1 132 -12 V12 A14 14 0 0 1 118 26 H44 Z" fill="none" stroke="#0d0f17" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M0 0 L44 -26 H118 A14 14 0 0 1 132 -12 V12 A14 14 0 0 1 118 26 H44 Z" fill="#39c5cf"/>
+    <circle cx="50" cy="0" r="9" fill="#0d0f17"/>
+    <g stroke="#0d0f17" stroke-width="7.5" fill="none" stroke-linecap="round">
+      <path d="M104 -11 C 104 -19 82 -19 82 -10 C 82 -2 104 -3 104 6 C 104 15 82 15 82 7"/>
+      <line x1="93" y1="-24" x2="93" y2="19"/>
+    </g>
+  </g>
 </svg>
