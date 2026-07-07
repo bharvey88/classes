@@ -265,13 +265,13 @@
 
 /* ---- Class identity colors (mirror the main site's data colors) ---- */
 [data-md-color-scheme="slate"] {
-  --shs-c-ha: #ffb454;
+  --shs-c-ha: #18bcf2; /* official Home Assistant blue */
   --shs-c-esphome: #39c5cf;
   --shs-c-wled: #9d6bff;
   --shs-c-solder: #2bd97c;
 }
 [data-md-color-scheme="default"] {
-  --shs-c-ha: #9b5d00;
+  --shs-c-ha: #0d84ac; /* HA blue, darkened for light scheme */
   --shs-c-esphome: #0c7d87;
   --shs-c-wled: #6b3fd1;
   --shs-c-solder: #11804b;
