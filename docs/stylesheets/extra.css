@@ -283,6 +283,14 @@
   vertical-align: -0.25em;
   margin-right: 0.2em;
 }
+/* Real project logos (e.g. the official HA logomark) used as class icons */
+.md-typeset img.class-logo {
+  height: 1.25em;
+  width: auto;
+  vertical-align: -0.25em;
+  margin-right: 0.25em;
+  display: inline;
+}
 .md-typeset .c-ha { color: var(--shs-c-ha); }
 .md-typeset .c-esphome { color: var(--shs-c-esphome); }
 .md-typeset .c-wled { color: var(--shs-c-wled); }

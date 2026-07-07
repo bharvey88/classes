@@ -12,7 +12,7 @@ Free, hands-on classes I teach live at the [Dallas Makerspace](https://dallasmak
 <img src="assets/photos/intro-ha-card.webp" class="feature-photo" alt="Live Home Assistant data on a wall-mounted LED matrix" />
 <div class="feature-body" markdown>
 
-## :material-home-assistant:{ .class-icon .c-ha } Intro to Home Assistant
+## ![Home Assistant logo](assets/home-assistant-logo.svg){ .class-logo } Intro to Home Assistant
 
 Every smart device in one app that runs in your own house instead of a vendor's cloud. Two hours, live demos, zero background needed.
 
