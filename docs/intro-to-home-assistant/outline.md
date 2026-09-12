@@ -2,47 +2,43 @@
 
 *Smart Homes Done the Right Way · Speaker Cue Outline*
 
-*Format: Presentation + live demo · Audience: complete beginners · Venue: Dallas Makerspace · Duration: ~95 min of content in a 2-hour slot, 5-min stretch break*
+*Format: Talk with hardware props, no live system on screen · Audience: complete beginners · Venue: Dallas Makerspace · Duration: ~95 min of content in a 2-hour slot, 5-min stretch break*
 
 ---
 
-## Block 1: The Hook (5 min)
+## Block 1: The Hook: Home Assistant Alongside Apple, Google, and Alexa (5 min)
 
 - Cold open, no intro, no slides
-- Dashboard already live on screen
-- Fire something visual + physical in front of them
-- Let "wait, what is that?" hang → *"Let me show you how we got here."*
-- Plant the giveaway picker: show a premade "winner picker" card: *"Rolls a random number. Remember this card, it comes back at the end of the night. Hang on to your ticket."*
-
-**Demo options to pick from later:**
-
-- **WLED strip/bulb**: on/off, color, an effect. Loudest visually, instant. Best crowd-pleaser, foreshadows ESPHome.
-- **Aqara Magic Cube**: flip/rotate/shake → action. Tactile "it's not even an app" magic.
-- **Smart button** (Aqara / Third Reality): single/double/long press → action.
-- **Hue**: reliable, less novel; good backup.
-- **Best combo:** Magic Cube gesture → WLED color change. Physical in → visible out.
-- **Logistics:** pre-stage on dashboard, confirm on network, test before doors open, manual toggle fallback (makerspaces are RF-noisy).
+- **Hands up**: Echo? Google speaker? HomeKit? More than one?
+- *"Unfortunately, your home still isn't very smart."*
+- **The pain**: an app per room, works with one assistant but not the other, features pulled in an update, dead when the internet dies
+- **Nobody throws anything out tonight**: all three are easy to start, each only talks to its own stuff
+- **The turn**: HA goes underneath; devices connect to HA, HA hands them back to Alexa, Google, or Apple, keep the speaker you already use
+- **What that buys**: one place everything meets, automations across brands, keeps working offline
+- **Proof**: mailbox opens → camera snapshot → phone notification → AOL "You've got mail" on every speaker → *"Nobody sold me that. I built it in an afternoon. Let me show you how we got here."*
+- Gear on the table all night, picked up as it comes up
 
 ## Giveaway Announcement (~1 min)
 
 - *"One of you is taking something home tonight. I'm not telling you what it is until the drawing."*
 - **Must be present to win.** The drawing happens at the end of the night.
-- Winner picked live by the random-number roller you just saw.
+- Winner drawn from a name wheel; get first names as people arrive
 - Milk the mystery: mention the box exists, don't open it, move on.
-- **Put the class URL on screen** (classes.smarthomesellout.com): *"Everything tonight is on this site. The handout has every link and gear pick, so follow along on your phone if you want. Nobody needs to take notes."*
+- **The class URL** (classes.smarthomesellout.com): whiteboard before doors open, say it twice. *"Everything tonight is on this site. The handout has every link and gear pick, so follow along on your phone if you want. Nobody needs to take notes."*
 
 ## Block 2: What is Home Assistant? (8 min)
 
 - Brief history: started 2013, Paulus Schoutsen
 - **The core idea: HA is the middleman.** One app in the middle, every protocol (Zigbee, Z-Wave, Wi-Fi, Bluetooth) connected to it, instead of ten vendor apps that don't talk to each other.
 - **Open Home Foundation**: vendor-neutral, privacy-first, open source
-- **Nabu Casa**: commercial arm, funds development, HA Cloud (remote access, Alexa/Google, voice)
+- **Nabu Casa**: commercial arm, funds development, HA Cloud (remote access, Alexa/Google, voice); hold up the hardware
 - **Apollo Automation**: *"I work here. We make ESPHome-based sensors, and we're one of the companies Nabu Casa is trusting to help monetize and grow ESPHome commercially."*
-- The ecosystem, two flavors:
-    - **Nabu Casa stewards:** ESPHome, Z-Wave JS, Music Assistant
-    - **Independent projects they fund/donate to:** Zigbee2MQTT
+- The ecosystem, three tiers (openhomefoundation.org/projects):
+    - **Owned outright:** Home Assistant, ESPHome, Music Assistant
+    - **Collabs** (partners, not owned): Zigbee2MQTT, WLED (the panel in the corner), OpenDisplay
+    - **Standards, drivers, libraries** (250+): Z-Wave JS, HACS, zigpy, Improv Wi-Fi, ESP Web Tools, Piper
 - Philosophy: local-first, no vendor lock-in, your data stays yours
-- **aiohttp closer**: "how HA talks to all your devices at once without choking; volunteers keep it alive" → donate link in handout
+- **aio-libs closer**: aiohttp, yarl, multidict and friends, how HA talks to every device at once without choking; volunteers keep them alive → donate link in handout
 
 ## Block 3: How to Run It (6 min)
 
@@ -53,7 +49,7 @@
     - **A used mini PC or an old laptop**: needs 6th-gen Intel or newer; a laptop works even with a dead/no screen (headless); mini PC e.g. Lenovo M910q or similar
     - **Heads up:** mini PCs used to be a lot cheaper before the AI boom drove demand up
     - **N100/N150 mini PCs**: new off Amazon, great value + headroom
-- Why we're skipping Docker / venv / manual today
+- **Advanced options**: running a VM on a server, or a Docker container
 
 ## Block 4: Core Concepts + Good Integrations (13 min)
 
@@ -62,27 +58,27 @@
 - **Cloud vs Local**: works without internet, privacy, speed, no subscription
 - **Integrations worth knowing** (the "it does *that*?" list):
     - **UniFi / UniFi Protect**: network presence + cameras
-    - **WLED**: addressable LEDs; can run on certain smart bulbs or on LED controllers
+    - **WLED**: addressable LEDs; runs on certain smart bulbs or LED controllers; the panel in the corner is running it, HA can drive it
     - **Z-Wave**: bring your Z-Wave gear into HA
     - **ESPHome**: your own DIY sensors/devices into HA
     - **Alarmo**: full alarm system, free
     - **BTHome**: local Bluetooth sensors, no cloud
     - **Frigate**: local AI camera / object detection
     - **HomeKit Device**: pair Wi-Fi devices into HA via the HomeKit protocol
-    - **HomeKit Bridge**: push HA devices *out* to Apple Home for Siri control
+    - **HomeKit Bridge**: push HA devices *out* to Apple Home for Siri control; local and free (Alexa/Google need HA Cloud); callback to the opening
     - **Plex**: *"I use it to play media on my TVs as part of morning/night routines"*
     - **Team Tracker**: the fun one: flash LEDs or fire an effect when your team scores a touchdown; build DIY scoreboards with ESPHome or WLED firmware on a HUB75 LED matrix
 
 ## Block 5: Protocols (15 min)
 
 - **Z-Wave**: mesh, licensed spectrum, very reliable, needs a controller
-    - **Best controller by far: Home Assistant Connect ZWA-2** (not a generic Zooz stick)
+    - **Best controller by far: Home Assistant Connect ZWA-2** (not a generic Zooz stick); hold it up
 - **Zigbee**: mesh, open standard, huge ecosystem, needs a coordinator
     - **ZHA** (built-in) vs **Zigbee2MQTT** (independent, broadest device support)
     - Your story: Hue bulbs paired straight to Z2M, no bridge, no account, no cloud
     - Gear: Hue bulbs, Aqara (T1M, door/window sensors, Magic Cube), Third Reality
     - **New IKEA stuff**: newer Thread-era devices can still pair over Zigbee via Z2M (verify models)
-    - Recommended coordinator: **Home Assistant Connect ZBT-2**
+    - Recommended coordinator: **Home Assistant Connect ZBT-2**, next to it on the table
 - **Wi-Fi / Ethernet**: direct IP, no hub
 - **Bluetooth / BLE**: short range, passive sensors, proxies
 - **Thread & Matter**: honest but gentle. Promising, but still working through firmware/reliability growing pains that Zigbee and Z-Wave sorted out years ago. Beginners can wait.
@@ -100,26 +96,28 @@
 
 Short questions on the spot, longer ones parked to the end.
 
-## Block 6: Live HA Demo (10 min)
+## Block 6: HA Walkthrough (10 min)
 
-- No onboarding walkthrough: start in a working system, that's what sells it
-- **Dashboard deep-dive**: sections, cards, building a view they'd actually use at home (skip the menu tour)
+- Skip onboarding: describe a working system, that's what sells it
+- **Dashboard deep-dive**: sections, cards, the view they'd actually use at home (skip the menu tour)
 - **HACS (Home Assistant Community Store)**: custom cards, themes, community integrations beyond what's built in
-    - Live: download a theme, **Catppuccin Macchiato** (cut if running long)
-    - Light caveat: third-party, install sparingly
+    - Theme worth naming: **Catppuccin Macchiato**
+    - Caveat: HACS is foundation-governed, what you install through it is not; install sparingly
 - **Companion app (iOS/Android)**: install, sign in, presence/device tracking, push notifications
-- **Adding integrations**: don't add one live (most want an account or API key, dead air on stage). Just say it's a couple of clicks in Settings and point at the list.
-- **Create a simple automation**: turn a light on/off with a Zigbee button (may change later)
-- Show the App store
+- **Adding integrations**: a couple of clicks in Settings, most want an account or API key; point at the list on the site
+- **Create a simple automation**: turn a light on/off with a Zigbee button, with the button in your hand
+- The App store: Mosquitto, ESPHome, File editor
 
 ## Break (5 min)
+
+Enter the names into the wheel.
 
 ## Block 7: Automations & Scripts: The Payoff (8 min)
 
 - **Automations = "when X happens, do Y"**: they run themselves
 - **Your real examples:**
-    - **Mailbox alert**: mailbox opens → camera snapshot → phone notification with the image + "You've got mail" → also pops on the desktop PC and the TVs (if online) → plays the old AOL "You've Got Mail" clip on the HomePods around the house
-    - **Leaving home** (cut if running long) (device tracker): I leave → lock doors + arm alarm → snapshot of the room → lights brightness/color off then back on → sleep the PC
+    - **Mailbox alert**, the one from the opening: mailbox opens → camera snapshot → phone notification with the image + "You've got mail" → also pops on the desktop PC and the TVs (if online) → plays the old AOL "You've Got Mail" clip on the HomePods around the house; one trigger, four actions, pieces on the table
+    - **Leaving home** (device tracker): I leave → lock doors + arm alarm → snapshot of the room → lights brightness/color off then back on → sleep the PC
 - **Scripts = a saved routine you trigger on demand** (vs automations that fire themselves)
     - Your wake-up routine and goodnight/sleep routine scripts
     - Can be fired by a button, voice, the dashboard, or called by an automation
@@ -128,7 +126,7 @@ Short questions on the spot, longer ones parked to the end.
 ## Block 8: ESPHome & Building Your Own (4 min)
 
 - What it is: turns cheap ESP32 chips into HA devices using YAML
-- Part of the ecosystem, Nabu Casa stewards it
+- Part of the ecosystem, under the Open Home Foundation like HA itself
 - **Apollo Automation** builds on it (your gear)
 - **ESPHome Starter Kit**: upcoming on-ramp into ESPHome → *"I've got a beta version here to show you"* (pass it around)
 - Full hands-on build is **its own future class**, tease it
@@ -145,7 +143,7 @@ Short questions on the spot, longer ones parked to the end.
 
 ## Block 9: More Ways to Interact: Voice & Wall Displays (4 min)
 
-- **HA Voice Preview Edition**: local voice assistant hardware
+- **HA Voice Preview Edition**: local voice assistant hardware; pass it around here
     - Honest caveat: replacing/mimicking Alexa or Google takes real manual setup today, not plug-and-play yet
 - **Wall tablets + Fully Kiosk**: cheap tablet as a wall-mounted dashboard
     - Fully Kiosk handles screen on/off (motion wake) + locked-down kiosk mode
@@ -154,7 +152,7 @@ Short questions on the spot, longer ones parked to the end.
 
 - What it is: an AI agent that talks directly to your HA through the MCP
 - Configure devices, build dashboards, write automations by *asking*
-- **Live moment if you're brave:** "make me a dashboard card for the living room" → watch it happen
+- **Before and after**: what you typed, what came back, how long it took; result open on the laptop, send it down the front row
 - Why it's a big deal for beginners: lowers the wall between "I have an idea" and "it's running"
 
 ## Block 11: Where to Go Next (3 min)
@@ -168,8 +166,8 @@ Short questions on the spot, longer ones parked to the end.
 
 ## The Giveaway Drawing (~2 min)
 
-- Callback: *"Remember the picker from the very first thing you saw tonight?"*
-- Reveal the prize now, then roll for the winner.
+- Reveal the prize now, then draw the winner.
+- **Name wheel** (wheelofnames.com) on the laptop: names entered during the break, hold it up, spin, read the winner out loud
 - Don't write the actual item in this outline. The outline is public and the mystery is the fun part.
 - If the prize happens to be something with a voice, letting it announce its own winner is a great reveal (cut the gag if running long).
 

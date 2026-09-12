@@ -53,7 +53,7 @@ This is the buying decision beginners get wrong most often, so get it right befo
 - **LEDs:** WLED (on bulbs or LED controllers); a HUB75 matrix for DIY scoreboards
 - **Voice:** Home Assistant Voice Preview Edition (local, but takes setup to rival Alexa/Google today)
 
-## From the Live Demo
+## Do These First
 
 - **Companion app (iOS/Android)**: your phone becomes a presence tracker and gets the notifications. Install it early, it makes everything else better.
 - **HACS**: the community store for custom dashboard cards, themes, and integrations. Third-party, so install sparingly.
@@ -83,7 +83,7 @@ This is the buying decision beginners get wrong most often, so get it right befo
 
 ## Support the Volunteers
 
-Almost every integration talks to your devices through small open-source libraries (like **aiohttp**) that volunteers maintain for free. If HA saves you money, consider chipping in: <https://opencollective.com/aio-libs>
+Almost every integration talks to your devices through small open-source libraries (the **aio-libs** projects: aiohttp, yarl, multidict) that volunteers maintain for free. If HA saves you money, consider chipping in: <https://opencollective.com/aio-libs>
 
 ---
 

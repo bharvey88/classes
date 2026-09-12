@@ -4,7 +4,7 @@ A class by **Brandon Harvey** (SmartHomeSellout) · [smarthomesellout.com](https
 
 ![A shelf of smart home gear: Hue bulbs, Zooz Z-Wave sensors, UniFi, Homey Pro](../assets/photos/intro-ha-hero.webp){ .page-hero }
 
-A free two-hour class with live demos from my own house. We start at zero and end with you knowing enough to set up your own system without wasting money on the wrong gear.
+A free two-hour class built on the gear and automations running in my own house, with the hardware there in the room to pick up. We start at zero and end with you knowing enough to set up your own system without wasting money on the wrong gear.
 
 Home Assistant is the middleman that connects your smart devices and protocols (Zigbee, Z-Wave, Wi-Fi, Bluetooth) into one app that runs in your own house, not in a vendor's cloud.
 
@@ -13,7 +13,7 @@ Home Assistant is the middleman that connects your smart devices and protocols (
 - What Home Assistant is, and why people use it instead of ten different vendor apps
 - What to run it on, including hardware you might already own
 - How smart devices talk to each other, and which kinds to buy for lights, locks, and sensors
-- A live walkthrough: dashboards, the phone app, and building your first automation
+- A walkthrough of what you actually use day to day: dashboards, the phone app, and your first automation
 - The payoff: a house that locks up when you leave and tells you when the mail arrives
 - Where to go next: building your own sensors, voice control, and letting AI do the hard or tedious parts
 

@@ -14,7 +14,7 @@ Free, hands-on classes I teach live at the [Dallas Makerspace](https://dallasmak
 
 ## ![Home Assistant logo](assets/home-assistant-logo.svg){ .class-logo } Intro to Home Assistant
 
-Every smart device in one app that runs in your own house instead of a vendor's cloud. Two hours, live demos, zero background needed.
+Every smart device in one app that runs in your own house instead of a vendor's cloud. Two hours, real hardware to pick up, zero background needed.
 
 [Go to the class](intro-to-home-assistant/index.md){ .md-button .md-button--primary }
 
