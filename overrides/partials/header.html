@@ -1,0 +1,79 @@
+{#-
+  Shared smarthomesellout.com header. Mirrors the main site's header markup
+  and links (src/layouts/BaseLayout.astro in the blog repo); styles live in
+  docs/stylesheets/extra.css under "Shared header".
+
+  Links and image paths are absolute or root-relative on purpose: instant
+  navigation keeps this header across page loads, so page-relative URLs
+  would break after the first click.
+-#}
+<header class="md-header shs-header" data-md-component="header">
+  <div class="shs-header__inner">
+    <a href="https://smarthomesellout.com/" class="shs-brand">
+      <img class="shs-brand__logo shs-brand__logo--light" src="/assets/logo-light.svg" alt="" width="40" height="40">
+      <img class="shs-brand__logo shs-brand__logo--dark" src="/assets/logo.svg" alt="" width="40" height="40">
+      <span>smarthomesellout</span>
+    </a>
+    <nav class="shs-nav" aria-label="Main">
+      <a href="https://smarthomesellout.com/buying-guides/">Buying Guides</a>
+      <a href="https://smarthomesellout.com/reviews/">Reviews</a>
+      <a href="https://smarthomesellout.com/blog/">Blog</a>
+      <a href="/" aria-current="true">Classes</a>
+      <a class="shs-nav__yt" href="https://www.youtube.com/@smarthomesellout" rel="noopener noreferrer">
+        <svg viewBox="0 0 22 16" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="21" height="15" rx="4" fill="#ff0033" />
+          <path d="M9 4.6v6.8l5.6-3.4z" fill="#fff" />
+        </svg>
+        <span class="shs-sr">YouTube</span>
+      </a>
+    </nav>
+    <div class="shs-tools">
+      {% if "material/search" in config.plugins %}
+        {% set search = config.plugins["material/search"] | attr("config") %}
+        {% if search.enabled %}
+          <label class="shs-round-btn" for="__search" title="{{ lang.t('search') }}" aria-label="{{ lang.t('search') }}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6" />
+              <path d="M15 15l5.5 5.5" />
+            </svg>
+          </label>
+          {% include "partials/search.html" %}
+        {% endif %}
+      {% endif %}
+      <label class="shs-menu" for="__drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <span class="shs-menu__label">Menu</span>
+      </label>
+      {#- Material's palette form, with the main site's toggle icons: sun in
+          light, moon in dark (the icon shows the current theme). -#}
+      <form class="md-header__option shs-palette" data-md-component="palette">
+        {% for option in config.theme.palette %}
+          {% set scheme  = option.scheme  | d("default", true) %}
+          {% set primary = option.primary | d("indigo", true) %}
+          {% set accent  = option.accent  | d("indigo", true) %}
+          <input class="md-option" data-md-color-media="{{ option.media }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}" {% if option.toggle %} aria-label="{{ option.toggle.name }}" {% else %} aria-hidden="true" {% endif %} type="radio" name="__palette" id="__palette_{{ loop.index0 }}">
+          {% if option.toggle %}
+            <label class="shs-round-btn" title="{{ option.toggle.name }}" for="__palette_{{ loop.index % loop.length }}" hidden>
+              {% if scheme == "slate" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4.2" />
+                  <path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" />
+                </svg>
+              {% endif %}
+            </label>
+          {% endif %}
+        {% endfor %}
+      </form>
+      {#- Light became the default on 2026-10-21. Material saved every earlier
+          visitor's palette (dark) on first load, so clear that once. -#}
+      <script>try{__md_get("__shs_light")||(__md_set("__palette",null),__md_set("__shs_light",1))}catch(e){}</script>
+      {% include "partials/javascripts/palette.html" %}
+    </div>
+  </div>
+</header>

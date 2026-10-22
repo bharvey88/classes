@@ -1,84 +1,103 @@
 /* =========================================================================
    classes.smarthomesellout.com - brand overrides for MkDocs Material
-   Tokens mirror smarthomesellout.com src/styles/global.css.
-   One accent (amber). Flat 1px borders. No shadows, no gradients.
+   Tokens mirror smarthomesellout.com src/styles/global.css (2026-10-21
+   relaunch): light default, off-white paper, near-black ink, one teal.
+   Flat 1px borders. No shadows, no gradients.
    ========================================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;600&display=swap");
 
-/* ---- Dark scheme (default) ---- */
-[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #0d0f17;
-  --md-default-fg-color: #f0eee9;
-  --md-default-fg-color--light: #a8a49c;
-  --md-default-fg-color--lighter: #71737e;
-  --md-default-fg-color--lightest: #232839;
-
-  --md-primary-fg-color: #11141d;   /* header / nav chrome */
-  --md-primary-bg-color: #f0eee9;   /* text on header */
-  --md-accent-fg-color: #39c5cf;
-  --md-typeset-a-color: #39c5cf;
-
-  --md-code-bg-color: #141823;
-  --md-code-fg-color: #f0eee9;
-
-  --md-footer-bg-color: #11141d;
-  --md-footer-bg-color--dark: #0d0f17;
-  --md-footer-fg-color: #f0eee9;
-  --md-footer-fg-color--light: #a8a49c;
-
-  --shs-surface: #141823;
-  --shs-surface-hover: #1a1f2e;
-  --shs-border: #232839;
-  --shs-border-strong: #323a4f;
-  --shs-accent: #39c5cf;
-  --shs-accent-ink: #06282b;
-
-  /* Variables Material's stock CSS consumes that 'custom' palettes must define */
-  --md-accent-fg-color--transparent: #39c5cf26;
-  --md-accent-bg-color: #06282b;
-  --md-primary-fg-color--light: #1a1f2e;
-  --md-primary-fg-color--dark: #0d0f17;
-  --md-primary-bg-color--light: rgba(240, 238, 233, 0.54);
-  --md-footer-fg-color--lighter: #71737e;
+:root {
+  --md-text-font: "Schibsted Grotesk";
+  --md-code-font: "JetBrains Mono";
+  --shs-font-display: "Zilla Slab", "Rockwell", Georgia, serif;
+  --shs-font-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shs-gutter: clamp(16px, 4vw, 40px);
 }
 
-/* ---- Light scheme (toggle) ---- */
+/* ---- Light scheme (default) ---- */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #faf9f6;
-  --md-default-fg-color: #1b1914;
-  --md-default-fg-color--light: #59554b;
-  --md-default-fg-color--lighter: #8b8779;
-  --md-default-fg-color--lightest: #e3dfd5;
+  --md-default-bg-color: #f9fbfb;
+  --md-default-fg-color: #0a0f10;
+  --md-default-fg-color--light: #485557;
+  --md-default-fg-color--lighter: #637173;
+  --md-default-fg-color--lightest: #d6dedf;
 
-  --md-primary-fg-color: #ffffff;
-  --md-primary-bg-color: #1b1914;
-  /* Bright teal text fails contrast on white; links darken, fills stay teal. */
+  --md-primary-fg-color: #f9fbfb;   /* header / drawer chrome */
+  --md-primary-bg-color: #0a0f10;   /* text on chrome */
+  /* Bright teal text fails contrast on paper; links darken, fills stay teal. */
   --md-accent-fg-color: #0c7d87;
   --md-typeset-a-color: #0c7d87;
 
-  --md-code-bg-color: #f2efe9;
-  --md-code-fg-color: #1b1914;
+  --md-code-bg-color: #eaf3f4;
+  --md-code-fg-color: #0a0f10;
 
-  --md-footer-bg-color: #ffffff;
-  --md-footer-bg-color--dark: #faf9f6;
-  --md-footer-fg-color: #1b1914;
-  --md-footer-fg-color--light: #59554b;
+  --md-footer-bg-color: #eaf3f4;
+  --md-footer-bg-color--dark: #eaf3f4;
+  --md-footer-fg-color: #0a0f10;
+  --md-footer-fg-color--light: #485557;
 
+  --shs-paper: #f9fbfb;
+  --shs-ink: #0a0f10;
+  --shs-rule: #d6dedf;
+  --shs-link: #0c7d87;
+  --shs-tint: #eaf3f4;
   --shs-surface: #ffffff;
-  --shs-surface-hover: #f2efe9;
-  --shs-border: #e3dfd5;
-  --shs-border-strong: #c9c3b4;
+  --shs-surface-hover: #eaf3f4;
+  --shs-border: #d6dedf;
+  --shs-border-strong: #aebcbe;
   --shs-accent: #39c5cf;
-  --shs-accent-ink: #06282b;
+  --shs-accent-ink: #0a0f10;
 
   /* Variables Material's stock CSS consumes that 'custom' palettes must define */
   --md-accent-fg-color--transparent: #0c7d8726;
-  --md-accent-bg-color: #faf9f6;
-  --md-primary-fg-color--light: #f2efe9;
-  --md-primary-fg-color--dark: #f2efe9;
-  --md-primary-bg-color--light: rgba(27, 25, 20, 0.54);
-  --md-footer-fg-color--lighter: #8b8779;
+  --md-accent-bg-color: #f9fbfb;
+  --md-primary-fg-color--light: #eaf3f4;
+  --md-primary-fg-color--dark: #eaf3f4;
+  --md-primary-bg-color--light: rgba(10, 15, 16, 0.54);
+  --md-footer-fg-color--lighter: #637173;
+}
+
+/* ---- Dark scheme (toggle) ---- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0e1517;
+  --md-default-fg-color: #ecf2f2;
+  --md-default-fg-color--light: #9fb1b3;
+  --md-default-fg-color--lighter: #7a8c8e;
+  --md-default-fg-color--lightest: #263639;
+
+  --md-primary-fg-color: #0e1517;
+  --md-primary-bg-color: #ecf2f2;
+  --md-accent-fg-color: #62d4dc;
+  --md-typeset-a-color: #62d4dc;
+
+  --md-code-bg-color: #121b1e;
+  --md-code-fg-color: #ecf2f2;
+
+  --md-footer-bg-color: #142023;
+  --md-footer-bg-color--dark: #142023;
+  --md-footer-fg-color: #ecf2f2;
+  --md-footer-fg-color--light: #9fb1b3;
+
+  --shs-paper: #0e1517;
+  --shs-ink: #ecf2f2;
+  --shs-rule: #263639;
+  --shs-link: #62d4dc;
+  --shs-tint: #142023;
+  --shs-surface: #121b1e;
+  --shs-surface-hover: #182629;
+  --shs-border: #263639;
+  --shs-border-strong: #3a4f53;
+  --shs-accent: #39c5cf;
+  --shs-accent-ink: #0a0f10;
+
+  /* Variables Material's stock CSS consumes that 'custom' palettes must define */
+  --md-accent-fg-color--transparent: #62d4dc26;
+  --md-accent-bg-color: #0a0f10;
+  --md-primary-fg-color--light: #182629;
+  --md-primary-fg-color--dark: #142023;
+  --md-primary-bg-color--light: rgba(236, 242, 242, 0.54);
+  --md-footer-fg-color--lighter: #7a8c8e;
 }
 
 /* ---- Kill Material's elevation shadows everywhere ---- */
@@ -94,34 +113,262 @@
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5 {
-  font-family: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--shs-font-display);
   font-weight: 600;
+  letter-spacing: -0.005em;
   color: var(--md-default-fg-color);
 }
 .md-typeset h1 { font-weight: 700; }
 
-/* ---- Header: flat, bordered, no shadow ---- */
-.md-header {
+/* =========================================================================
+   Shared header: same look and links as smarthomesellout.com's header
+   (src/layouts/BaseLayout.astro there). Markup lives in
+   overrides/partials/header.html. Sizes are px to match the main site;
+   Material's rem is 20px at desktop widths.
+   ========================================================================= */
+
+/* Not sticky, like the main site: the header scrolls away. */
+.md-header.shs-header {
+  position: relative;
+  height: auto;
+  background: var(--shs-paper);
+  color: var(--shs-ink);
+  border-bottom: 3px solid var(--shs-accent);
   box-shadow: none;
-  border-bottom: 1px solid var(--shs-border);
+  font-family: var(--shs-font-body);
+  font-size: 17px;
+  line-height: 1.55;
 }
-.md-header__title {
-  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
-  font-weight: 600;
+.md-sidebar { top: 0; }
+
+/* Page grid lines up with the header's 1200px container: content starts
+   where the logo does (0.8rem is Material's content margin). */
+.md-grid { max-width: calc(1200px - 2 * var(--shs-gutter) + 1.6rem); }
+
+.shs-header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--shs-gutter);
 }
 
-/* ---- Search field: flat surface ---- */
+.shs-header a { text-decoration: none; }
+
+.shs-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--shs-ink);
+  font: 700 23px/1 var(--shs-font-display);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.shs-header .shs-brand:hover { color: var(--shs-ink); }
+.shs-brand__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.shs-brand__logo--dark { display: none; }
+[data-md-color-scheme="slate"] .shs-brand__logo--dark { display: block; }
+[data-md-color-scheme="slate"] .shs-brand__logo--light { display: none; }
+
+.shs-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.shs-nav a {
+  padding: 8px 11px;
+  border-radius: 6px;
+  color: var(--shs-ink);
+  font-size: 15.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-underline-offset: 0.35em;
+}
+.shs-header .shs-nav a:hover {
+  color: var(--shs-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+/* Current section: the header's teal under the link. */
+.shs-header .shs-nav a[aria-current] {
+  text-decoration: underline;
+  text-decoration-color: var(--shs-accent);
+  text-decoration-thickness: 3px;
+}
+.shs-nav .shs-nav__yt {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+}
+.shs-nav__yt svg {
+  display: block;
+  width: 26px;
+  height: 19px;
+}
+.shs-sr,
+.shs-menu__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.shs-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Round 40px buttons: the main site's theme toggle, reused for search. */
+.shs-round-btn {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--shs-rule);
+  color: var(--shs-ink);
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+.shs-round-btn[hidden] { display: none; }
+.shs-round-btn:hover { background: var(--shs-tint); }
+.shs-round-btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.shs-palette { display: flex; }
+
+/* Menu opens Material's drawer (class navigation, plus the site links on
+   phones), so it only shows where the left sidebar is hidden. Icon-only
+   while the header still has room for the site links. */
+.shs-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border: 1px solid var(--shs-rule);
+  border-radius: 6px;
+  color: var(--shs-ink);
+  font: 600 15px/1 var(--shs-font-body);
+  cursor: pointer;
+}
+.shs-menu svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.shs-menu:hover,
+[data-md-toggle="drawer"]:checked ~ .md-header .shs-menu {
+  background: var(--shs-tint);
+}
+@media (min-width: 76.25em) {
+  .shs-menu { display: none; }
+}
+
+@media (max-width: 1020px) {
+  .shs-nav a {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+
+/* Phone and small tablet: site links fold into the drawer, Menu gets its
+   label back, as on the main site. */
+@media (max-width: 880px) {
+  .shs-header__inner {
+    gap: 0 12px;
+    min-height: 64px;
+    padding-block: 12px;
+  }
+  .shs-brand { font-size: 21px; }
+  .shs-brand__logo { width: 36px; height: 36px; }
+  .shs-nav { display: none; }
+  .shs-tools { margin-left: auto; }
+  .shs-menu { width: auto; padding: 0 12px; }
+  .shs-menu__label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .shs-brand { font-size: 19px; gap: 9px; }
+  .shs-brand__logo { width: 32px; height: 32px; }
+  .shs-tools { gap: 8px; }
+  .shs-menu { width: 40px; padding: 0; }
+  .shs-menu__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+/* Drawer: the main site's links, phones only (wider, the header has them). */
+.shs-drawer-site { display: none; }
+@media (max-width: 880px) {
+  .md-nav--primary .shs-drawer-site {
+    display: block;
+    border-bottom: 1px solid var(--shs-rule);
+  }
+}
+
+/* ---- Search: Material's search, opened from the round icon button ---- */
+.shs-header .md-search {
+  position: absolute;
+  top: 18px;
+  right: var(--shs-gutter);
+  padding: 0;
+}
+@media (min-width: 60em) {
+  .shs-header .md-search { visibility: hidden; }
+  [data-md-toggle="search"]:checked ~ .md-header .md-search { visibility: visible; }
+}
 [data-md-toggle="search"]:checked ~ .md-header .md-search__form,
 .md-search__form {
   background: var(--shs-surface);
   border: 1px solid var(--shs-border);
-  border-radius: 0.5rem;
+  border-radius: 6px;
   box-shadow: none;
 }
 .md-search__output {
   border: 1px solid var(--shs-border);
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 6px 6px;
   box-shadow: none;
+}
+/* Phones: search is a full-screen sheet, so no box around it. */
+@media (max-width: 59.984375em) {
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__form,
+  .md-search__form,
+  .md-search__output {
+    border: 0;
+    border-radius: 0;
+  }
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+    border-bottom: 1px solid var(--shs-border);
+  }
 }
 
 /* ---- Grid cards: flat 1px-border surfaces ---- */
@@ -340,7 +587,7 @@
 /* Keep a lone card tile-sized: auto-fill preserves empty tracks where
    Material's auto-fit would stretch one card across the whole row. */
 .md-typeset .grid {
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
 }
 
 /* ---- Uncropped bordered figure (e.g. diagrams, screenshots) ---- */

@@ -8,6 +8,7 @@ Catalog of classes Brandon Harvey teaches at Dallas Makerspace, published at cla
 - `docs/teaching.md`: the fork/build/license page for people who want to teach a class. Class pages are written for attendees; anything about forking, pipelines, or repo mechanics belongs on teaching.md or in the README, never on a class page.
 - `docs/<class-slug>/`: one folder per class (`index.md` class page, `outline.md` speaker outline, `handout.md` attendee handout).
 - `docs/stylesheets/extra.css`: the entire brand restyle. No other styling anywhere.
+- `overrides/partials/`: Material template overrides (shared header, drawer nav). Markup only; their styles live in `extra.css`.
 - `specs/`, `plans/`: design docs, NOT published (everything under `docs/` is).
 
 ## The hard rule: shared Markdown
@@ -19,15 +20,17 @@ Catalog of classes Brandon Harvey teaches at Dallas Makerspace, published at cla
 
 ## Design rules
 
-Tokens in `extra.css` started as a mirror of smarthomesellout.com's `src/styles/global.css` (the 2026-06 de-slop redesign). On 2026-07-04 Brandon switched this site's accent from amber to teal; the blog has NOT been ported yet, so the sites intentionally diverge until that session happens.
+This site reads as part of smarthomesellout.com. Tokens in `extra.css` mirror the main site's `src/styles/global.css` (the 2026-10-21 relaunch); when the main site's palette or header changes, port it here.
 
-- Dark default, light toggle. ONE brand accent: teal `#39c5cf` (`#0c7d87` for text links in light mode).
-- `docs/assets/logo.svg` (header logo + favicon) is the shared SmartHomeSellout brand mark (broadcasting house, RJ45 door, $ tag). The master lives in the blog repo at `public/brand/logo.svg`; if the mark changes there, copy the new version here rather than editing this copy.
+- Shared header: `overrides/partials/header.html` (via `custom_dir: overrides`) copies the main site's header from its `src/layouts/BaseLayout.astro`: logo plus "smarthomesellout" wordmark linking to smarthomesellout.com, Buying Guides / Reviews / Blog / Classes (Classes is this site, underlined as the current section), YouTube icon, round theme toggle, 3px `#39c5cf` rule. It adds a round search button (Material search) and a Menu button that opens Material's drawer below 1220px. Sizes are px to match the main site at 1366px; styles are under "Shared header" in `extra.css`. The header is not sticky, like the main site. Header URLs are absolute or root-relative because instant navigation keeps the header across page loads.
+- `overrides/partials/nav.html` is Material's nav plus the main site's links at the top of the drawer, shown at phone widths (880px and below) where the header folds them away.
+- Light default (listed first in `mkdocs.yml`), dark toggle. Light: paper `#f9fbfb`, ink `#0a0f10`, muted `#485557`, rules `#d6dedf`. Dark: paper `#0e1517`, ink `#ecf2f2`, rules `#263639`. ONE brand accent: teal `#39c5cf` for fills and the header rule, `#0c7d87` for text links in light, `#62d4dc` in dark.
+- `docs/assets/logo-light.svg` (header, light scheme) and `docs/assets/logo.svg` (header in dark, drawer, favicon) are the shared SmartHomeSellout brand mark (broadcasting house, RJ45 door, $ tag). The masters live in the blog repo at `public/brand/logo-light.svg` and `public/brand/logo.svg`; if the mark changes there, copy the new version here rather than editing these copies.
 - Each class additionally has an identity color, used ONLY for its card top border and icon: HA uses the official Home Assistant blue `#18bcf2` (`#0d84ac` light scheme, since 2026-07-07; Brandon wants real project brand colors, not invented tints), ESPHome teal, WLED violet, soldering green (`--shs-c-*` in extra.css, both schemes). Known issue: ESPHome's identity teal now matches the site accent; give ESPHome a new hue before its class goes live (check ESPHome's real brand color).
 - The hub features the live class in a full-width `.feature-card` (raw `<img class="feature-photo">` + `.feature-body` div; markdown wraps the img in a `<p>`, which the CSS relies on). Coming-soon classes stay as compact muted grid cards.
 - Class cards carry a photo (`.card-photo`) and the class page a hero image (`.page-hero`). Real photos preferred; flat SVG placeholders live in `docs/assets/placeholders/` until Brandon supplies them. Swap a placeholder by replacing the image link on the hub and class page (or overwriting the file if the format matches).
 - Flat 1px borders, 0.75rem radius. Never add box shadows, gradients, glow, or extra accent colors beyond the class identity colors above.
-- Headings: Space Grotesk. Body: Inter. Code: JetBrains Mono.
+- Headings and the header wordmark: Zilla Slab. Body: Schibsted Grotesk. Code: JetBrains Mono. All three load from Google Fonts in `extra.css` (`theme.font` is `false`).
 - Voice: terse, concrete, plain headings. No em dashes anywhere, in any file, ever: use commas, colons, parentheses, or sentence breaks.
 - Keep bold for product names, giveaway cues, and real warnings. No bold-stuffing.
 
